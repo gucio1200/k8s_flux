@@ -25,6 +25,6 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
       tolerations:
-      - key: node-role.kubernetes.io/master
+      - key: node-role.kubernetes.io/controller
         operator: Exists
         effect: NoSchedule
