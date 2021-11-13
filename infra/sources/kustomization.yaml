@@ -10,3 +10,4 @@ resources:
   - podinfo.yaml
   - aquasecurity.yaml
   - datadog.yaml
+  - kubelived.yaml
