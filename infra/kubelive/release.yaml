@@ -18,3 +18,5 @@ spec:
       retries: 3
   values:
     installCRDs: true
+    keepalived:
+      virtual_address: 192.168.0.35/24
