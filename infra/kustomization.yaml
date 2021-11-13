@@ -9,3 +9,4 @@ resources:
   - metallb
   - descheduler
   - garbage
+  - reboot-cordinator
