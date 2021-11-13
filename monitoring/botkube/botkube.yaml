@@ -23,6 +23,8 @@ spec:
       pullPolicy: Always
     serviceMonitor:
       enabled: false
+    communications:
+      existingSecretName: "botkube-helm-values"
     config:
       settings:
         clustername: k8s
@@ -185,7 +187,3 @@ spec:
             - create
             - delete
             - error
-  valuesFrom:
-  - kind: Secret
-    name: "botkube-helm-values"
-    optional: false
