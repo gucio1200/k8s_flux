@@ -12,3 +12,4 @@ resources:
   - datadog.yaml
   - kubelived.yaml
   - olli-ai.yaml
+  - metallb.yaml
