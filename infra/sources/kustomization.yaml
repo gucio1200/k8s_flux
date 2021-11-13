@@ -13,3 +13,4 @@ resources:
   - kubelived.yaml
   - olli-ai.yaml
   - metallb.yaml
+  - descheduler.yaml
