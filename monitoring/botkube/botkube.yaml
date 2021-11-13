@@ -18,6 +18,10 @@ spec:
       interval: 5m
   values:
     nodeSelector: { node.kubernetes.io/controller: "true" }
+    tolerations:
+      - key: node-role.kubernetes.io/controller
+        operator: Exists
+        effect: NoSchedule
     image:
       repository: infracloudio/botkube
       tag: v0.12.3
