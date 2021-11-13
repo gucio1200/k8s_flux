@@ -4,4 +4,4 @@ resources:
   - sources
   - weave
   - starboard
-#  - kubelive
+  - kubelive

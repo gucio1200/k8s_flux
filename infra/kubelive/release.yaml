@@ -7,7 +7,7 @@ spec:
   releaseName: kubelived
   chart:
     spec:
-      chart: kubelived
+      chart: ./charts/kubelived
       sourceRef:
         kind: GitRepository
         name: kubelived
