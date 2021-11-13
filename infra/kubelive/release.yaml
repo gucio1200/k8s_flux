@@ -26,6 +26,6 @@ spec:
           key: node-role.kubernetes.io/controller
           operator: Exists
     keepalived:
-      instances:
-        - iface: VI_1
-          virtual_address: '192.168.0.35'
+#      instances:
+#        - iface: VI_1
+#          virtual_address: '192.168.0.35'
