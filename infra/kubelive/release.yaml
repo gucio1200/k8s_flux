@@ -18,12 +18,12 @@ spec:
       retries: 3
   values:
     installer:
-      nodeSelector: { node.kubernetes.io/master: "" }
+      nodeSelector: { node.kubernetes.io/controller: "true" }
       tolerations:
         - key: CriticalAddonsOnly
           operator: Exists
         - effect: NoSchedule
-          key: node-role.kubernetes.io/master
+          key: node-role.kubernetes.io/controller
           operator: Exists
     keepalived:
       virtual_address: 192.168.0.35/24
