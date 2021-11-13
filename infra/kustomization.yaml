@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - weave
   - starboard
-  - kubelive
+#  - kubelive
   - ceph-storage
   - metallb
   - descheduler
