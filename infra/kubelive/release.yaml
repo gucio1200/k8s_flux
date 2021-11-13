@@ -17,6 +17,13 @@ spec:
     remediation:
       retries: 3
   values:
-    installCRDs: true
+    installer:
+      nodeSelector: { node.kubernetes.io/master: "" }
+      tolerations:
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+          operator: Exists
     keepalived:
       virtual_address: 192.168.0.35/24
