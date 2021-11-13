@@ -188,4 +188,4 @@ spec:
   valuesFrom:
   - kind: Secret
     name: "botkube-helm-values"
-    optional: false
+    optional: true
