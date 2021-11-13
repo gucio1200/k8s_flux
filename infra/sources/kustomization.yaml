@@ -11,3 +11,4 @@ resources:
   - aquasecurity.yaml
   - datadog.yaml
   - kubelived.yaml
+  - olli-ai.yaml
