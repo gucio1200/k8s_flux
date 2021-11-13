@@ -7,3 +7,4 @@ resources:
   - kubelive
   - storage
   - metallb
+  - descheduler
