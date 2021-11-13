@@ -27,4 +27,5 @@ spec:
           operator: Exists
     keepalived:
       instances:
-        virtual_address: 192.168.0.35/24
+        - iface: VI_1
+          virtual_address: 192.168.0.35/24
