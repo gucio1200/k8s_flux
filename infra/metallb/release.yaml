@@ -17,6 +17,14 @@ spec:
     remediation:
       retries: 3
   values:
+    controller:
+      nodeSelector: { node.kubernetes.io/controller: "true" }
+      tolerations:
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/controller
+          operator: Exists
     configInline:
       peers:
       - peer-address: 192.168.0.151
