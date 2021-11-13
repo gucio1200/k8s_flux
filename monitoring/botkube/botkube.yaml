@@ -28,8 +28,14 @@ spec:
       pullPolicy: Always
     serviceMonitor:
       enabled: false
-#    communications:
-#      existingSecretName: "botkube-helm-values"
+    rbac:
+      create: true
+      rules:
+        - apiGroups: ["*"]
+          resources: ["*"]
+          verbs: ["get", "watch", "list"]
+    serviceAccount:
+      create: true
     config:
       settings:
         clustername: k8s
