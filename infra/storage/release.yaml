@@ -29,8 +29,3 @@ spec:
       path: /kubedata
     storageClass:
       defaultClass: true
-    nodeSelector: { kubernetes.io/os: "linux" }
-    tolerations:
-      - key: node-role.kubernetes.io/controller
-        effect: NoSchedule
-    priorityClassName: system-cluster-critical
