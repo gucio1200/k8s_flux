@@ -22,7 +22,7 @@ spec:
       tag: v0.12.3
       pullPolicy: Always
     serviceMonitor:
-      enabled: true
+      enabled: false
     config:
       settings:
         clustername: k8s
