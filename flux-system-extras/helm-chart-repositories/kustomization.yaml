@@ -17,3 +17,4 @@ resources:
   - stakater-charts.yaml
   - infracloudio-charts.yaml
   - flagger.yaml
+  - metrics-server.yaml
