@@ -18,8 +18,9 @@ spec:
     remediation:
       retries: 3
   values:
-    podAnnotations:
-      sidecar.istio.io/inject: true
+    serviceMonitor:
+      additionalLabels:
+        sidecar.istio.io/inject: true
     service:
       enabled: true
       type: ClusterIP
