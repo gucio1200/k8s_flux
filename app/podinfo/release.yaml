@@ -35,7 +35,7 @@ spec:
         - host: podinfo.ingress.space
           paths:
             - path: /
-              pathType: ImplementationSpecific              
+              pathType: Prefix
       tls:
         - secretName: podinfo-cert
           hosts:
