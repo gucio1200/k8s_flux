@@ -34,4 +34,4 @@ spec:
       - name: default
         protocol: bgp
         addresses:
-          - 192.168.99.0/24
+          - 192.168.99.1-192.168.99.100
