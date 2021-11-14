@@ -16,3 +16,4 @@ resources:
   - descheduler.yaml
   - stakater-charts.yaml
   - infracloudio-charts.yaml
+  - flagger.yaml
