@@ -16,9 +16,6 @@ spec:
           rollingUpdate:
             maxSurge: 1
             maxUnavailable: 1
-        hpaSpec:
-          minReplicas: 2
-          maxReplicas: 3
         affinity:
           podAntiAffinity:
             requiredDuringSchedulingIgnoredDuringExecution:
@@ -48,9 +45,6 @@ spec:
             rollingUpdate:
               maxSurge: 1
               maxUnavailable: 1
-          hpaSpec:
-            minReplicas: 2
-            maxReplicas: 3
           affinity:
             podAntiAffinity:
               requiredDuringSchedulingIgnoredDuringExecution:
