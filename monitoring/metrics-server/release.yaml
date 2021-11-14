@@ -16,6 +16,8 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    hostNetwork:
+      enabled: true
     defaultArgs:
       - --cert-dir=/tmp
       - --kubelet-preferred-address-types=InternalIP
