@@ -54,3 +54,7 @@ spec:
       kind: Deployment
       name: kiali
       namespace: istio-system
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: flagger
+      namespace: istio-system
