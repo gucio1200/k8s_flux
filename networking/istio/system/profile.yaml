@@ -5,6 +5,9 @@ metadata:
   name: istio-default
 spec:
   profile: default
+  meshConfig:
+    accessLogFile: /dev/stdout
+    enableTracing: true
   components:
     ingressGateways:
       - name: istio-ingressgateway
