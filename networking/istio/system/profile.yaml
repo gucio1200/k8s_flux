@@ -4,4 +4,11 @@ metadata:
   namespace: istio-system
   name: istio-default
 spec:
-  profile: demo
+  profile: default
+  components:
+    ingressGateways:
+      - name: istio-ingressgateway
+        enabled: true
+        k8s:
+          service:
+            externalTrafficPolicy: Local
