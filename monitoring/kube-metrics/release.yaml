@@ -15,3 +15,5 @@ spec:
         name: prometheus-community
         namespace: flux-system
       interval: 5m
+    args:
+      - --kubelet-preferred-address-types=InternalIP
