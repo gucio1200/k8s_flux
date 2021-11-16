@@ -5,4 +5,4 @@ resources:
   - namespace.yaml
   - metrics-server/release.yaml
   - prom-adapter/release.yaml
-  - prom
+#  - prom
