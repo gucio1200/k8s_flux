@@ -20,7 +20,7 @@ spec:
       url: http://prometheus-prometheus.monitoring
       port: 9090
     rules:
-      default: false
+      default: true
       custom:
         - seriesQuery: 'http_requests_total{kubernetes_namespace!="",kubernetes_pod_name!=""}'
           resources:
