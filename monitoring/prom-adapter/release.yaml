@@ -17,7 +17,7 @@ spec:
       interval: 5m
   values:
     prometheus:
-      url: http://prometheus.monitoring
+      url: http://prometheus-prometheus.monitoring
       port: 9090
     rules:
       default: false
