@@ -44,7 +44,7 @@ spec:
             spec:
               resources:
                 requests:
-                  storage: 10Gi
+                  storage: 5Gi
         podAntiAffinity: "hard"
       config:
         global:
@@ -87,7 +87,7 @@ spec:
             spec:
               resources:
                 requests:
-                  storage: 10Gi
+                  storage: 5Gi
   valuesFrom:
   - kind: Secret
     name: "kube-prometheus-stack-values"
