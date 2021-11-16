@@ -63,7 +63,7 @@ spec:
           action: replace
     prometheus:
       prometheusSpec:
-        replicas: 2
+        replicas: 1
         replicaExternalLabelName: "replica"
         ruleSelector: {}
         ruleNamespaceSelector: {}
