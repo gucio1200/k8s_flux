@@ -36,7 +36,7 @@ spec:
       createCustomResource: true
       configReloaderCpu: 200m
       admissionWebhooks:
-        enabled: false
+        enabled: true
     alertmanager:
       alertmanagerSpec:
         podAntiAffinity: "hard"
