@@ -39,12 +39,6 @@ spec:
         enabled: false
     alertmanager:
       alertmanagerSpec:
-        storage:
-          volumeClaimTemplate:
-            spec:
-              resources:
-                requests:
-                  storage: 5Gi
         podAntiAffinity: "hard"
       config:
         global:
@@ -82,9 +76,3 @@ spec:
         retention: 6h
         enableAdminAPI: true
         walCompression: true
-        storageSpec:
-          volumeClaimTemplate:
-            spec:
-              resources:
-                requests:
-                  storage: 5Gi
