@@ -10,6 +10,7 @@ spec:
     name: flux-system
   path: ./networking/istio/operator
   prune: true
+  force: true
   validation: client
   healthChecks:
     - apiVersion: apps/v1
@@ -32,6 +33,7 @@ spec:
     name: flux-system
   path: ./networking/istio/system
   prune: true
+  force: true
   validation: client
   healthChecks:
     - apiVersion: apps/v1
@@ -74,6 +76,7 @@ spec:
     name: flux-system
   path: ./networking/istio/gateway
   prune: true
+  force: true
   validation: client
 
 ---
