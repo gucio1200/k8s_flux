@@ -22,6 +22,6 @@ spec:
       hosts:
         - "*"
       tls:
-        mode: SIMPLE
+        mode: PASSTHROUGH
 #        minProtocolVersion: TLSV1_2
 #        maxProtocolVersion: TLSV1_3
