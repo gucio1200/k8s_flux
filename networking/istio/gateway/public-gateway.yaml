@@ -10,18 +10,18 @@ spec:
     - port:
         number: 80
         name: http
-        protocol: HTTP2
+        protocol: HTTP
       hosts:
         - "*"
-      tls:
-        httpsRedirect: true
-    - port:
-        number: 443
-        name: https
-        protocol: HTTPS
-      hosts:
-        - "*"
-      tls:
-        mode: ISTIO_MUTUAL
-        minProtocolVersion: TLSV1_2
-        maxProtocolVersion: TLSV1_3
+#      tls:
+#        httpsRedirect: true
+#    - port:
+#        number: 443
+#        name: https
+#        protocol: HTTPS
+#      hosts:
+#        - "*"
+#      tls:
+#        mode: ISTIO_MUTUAL
+#        minProtocolVersion: TLSV1_2
+#        maxProtocolVersion: TLSV1_3
