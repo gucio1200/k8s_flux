@@ -3,4 +3,4 @@ kind: Kustomization
 metadata:
   namespace: default
 resources:
-#  - podinfo
+  - podinfo
