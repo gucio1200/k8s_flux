@@ -18,6 +18,3 @@ spec:
       retries: 3
   values:
     enable-analytics: false
-    apiserver:
-      healthcheck:
-        enabled: true
