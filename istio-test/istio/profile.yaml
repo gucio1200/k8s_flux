@@ -2,6 +2,7 @@ apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 metadata:
   name: test-istio
+  namespace: istio-test
 spec:
   profile: default
   meshConfig:
