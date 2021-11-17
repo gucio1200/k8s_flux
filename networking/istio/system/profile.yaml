@@ -39,9 +39,9 @@ spec:
     ingressGateways:
       - name: istio-ingressgateway
         namespace: ingress
-        loadBalancerIP: 192.168.99.2
         enabled: true
         k8s:
+          loadBalancerIP: 192.168.99.2
           strategy:
             type: RollingUpdate
             rollingUpdate:
