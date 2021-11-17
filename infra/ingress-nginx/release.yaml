@@ -18,6 +18,8 @@ spec:
       retries: 3
   values:
     controller:
+      configAnnotations:
+        sidecar.istio.io/inject: 'true'
       autoscaling:
         enabled: true
       config:
