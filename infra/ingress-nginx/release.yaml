@@ -25,5 +25,5 @@ spec:
         enable-owasp-modsecurity: true
       resources:
         requests:
-          cpu: 100m
+          cpu: 500m
           memory: 500Mi
