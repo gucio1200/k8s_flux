@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - release.yaml
   - hpa.yaml
-  - public-gateway.yaml
+#  - public-gateway.yaml
   - profile.yaml

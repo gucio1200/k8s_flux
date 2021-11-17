@@ -2,7 +2,7 @@ apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 metadata:
   namespace: default
-  name: istio-default2
+  name: istio
 spec:
   profile: default
   meshConfig:
@@ -13,30 +13,5 @@ spec:
       - name: ingressgateway2
         enabled: true
         k8s:
-          strategy:
-            type: RollingUpdate
-            rollingUpdate:
-              maxSurge: 1
-              maxUnavailable: 1
-          affinity:
-            podAntiAffinity:
-              requiredDuringSchedulingIgnoredDuringExecution:
-              - labelSelector:
-                  matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                    - ingressgateway2
-                topologyKey: kubernetes.io/hostname
-              preferredDuringSchedulingIgnoredDuringExecution:
-              - weight: 1
-                podAffinityTerm:
-                  labelSelector:
-                    matchExpressions:
-                    - key: app
-                      operator: In
-                      values:
-                      - ingressgateway2
-                  topologyKey: failure-domain.beta.kubernetes.io/zone
           service:
             externalTrafficPolicy: Local
