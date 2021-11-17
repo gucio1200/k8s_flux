@@ -23,3 +23,6 @@ spec:
       config:
         enable-modsecurity: true
         enable-owasp-modsecurity: true
+      resources:
+        cpu: 100m
+        memory: 200Mi
