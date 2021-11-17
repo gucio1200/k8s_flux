@@ -12,7 +12,7 @@ spec:
     matchLabels:
       app: prometheus
   endpoints:
-  - interval: 5s
+  - interval: 15s
     scrapeTimeout: 60s
     params:
       'match[]':
