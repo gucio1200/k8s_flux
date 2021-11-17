@@ -18,4 +18,5 @@ resources:
   - infracloudio-charts.yaml
   - flagger.yaml
   - metrics-server.yaml
+  - appscode.yaml
   - ingress-nginx.yaml
