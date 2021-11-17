@@ -20,6 +20,8 @@ spec:
     controller:
       annotations:
         sidecar.istio.io/inject: 'true'
+        traffic.sidecar.istio.io/includeInboundPorts: ''
+        traffic.sidecar.istio.io/excludeInboundPorts: '80,443'
       autoscaling:
         enabled: true
       config:
