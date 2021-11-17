@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: istio-ingress
-  namespace: default
+  namespace: istio-test
   annotations:
     nginx.ingress.kubernetes.io/service-upstream: "true"
 spec:
@@ -16,6 +16,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: istio-ingressgateway.istio-system
+            name: istio-ingressgateway-test
             port:
               number: 80
