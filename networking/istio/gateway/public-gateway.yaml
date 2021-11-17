@@ -15,12 +15,12 @@ spec:
         - "*"
 #      tls:
 #        httpsRedirect: true
-#    - port:
-#        number: 443
-#        name: https
-#        protocol: HTTPS
-#      hosts:
-#        - "*"
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      hosts:
+        - "*"
 #      tls:
 #        mode: ISTIO_MUTUAL
 #        minProtocolVersion: TLSV1_2
