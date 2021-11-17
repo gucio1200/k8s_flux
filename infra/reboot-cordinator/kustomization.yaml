@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - rbac
-  - namespace.yaml
   - update-agent-sa.yaml
   - update-agent.yaml
   - update-operator-sa.yaml
