@@ -8,4 +8,4 @@ resources:
   - garbage
   - reboot-cordinator
   - reloader
-  - ingress-nginx
+#  - ingress-nginx
