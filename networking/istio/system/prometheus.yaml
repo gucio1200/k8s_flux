@@ -350,16 +350,14 @@ data:
       - record: "workload:istio_tcp_received_bytes_total_sum"
         expr: |
           sum without(instance, kubernetes_namespace, kubernetes_pod_name) (istio_tcp_received_bytes_total_sum)
+
       - record: "workload:istio_tcp_received_bytes_total_bucket"
         expr: |
           sum without(instance, kubernetes_namespace, kubernetes_pod_name) (istio_tcp_received_bytes_total_bucket)
-      - record: "workload:istio_requests:by_pod_destination:rate1m"
+
+      - record: "workload:istio_requests"
         expr: |
-          sum(irate(istio_requests_total{reporter="destination"}[1m]))
-          by (
-            kubernetes_pod_name,
-            destination_workload_namespace
-          )
+          sum without(instance, kubernetes_namespace) (istio_requests_total)
   rules: |
     {}
 ---
