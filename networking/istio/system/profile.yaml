@@ -41,7 +41,6 @@ spec:
         namespace: ingress
         enabled: true
         k8s:
-          loadBalancerIP: 192.168.99.2
           strategy:
             type: RollingUpdate
             rollingUpdate:
@@ -69,3 +68,4 @@ spec:
                   topologyKey: failure-domain.beta.kubernetes.io/zone
           service:
             externalTrafficPolicy: Local
+            loadBalancerIP: 192.168.99.2
