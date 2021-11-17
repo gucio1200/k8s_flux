@@ -67,3 +67,11 @@ spec:
                   topologyKey: failure-domain.beta.kubernetes.io/zone
           service:
             externalTrafficPolicy: Local
+      - name: istio-ingressgateway
+        namespace: istio-test
+        label:
+          istio: istio-ingressgateway-test
+        enabled: true
+        k8s:
+          service:
+            externalTrafficPolicy: Local
