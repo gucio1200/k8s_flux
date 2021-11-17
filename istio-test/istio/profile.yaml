@@ -1,7 +1,6 @@
 apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 metadata:
-  namespace: default
   name: istio
 spec:
   profile: default
@@ -10,7 +9,7 @@ spec:
     enableTracing: true
   components:
     ingressGateways:
-      - name: ingressgateway2
+      - name: ingressgateway
         enabled: true
         k8s:
           service:
