@@ -1,7 +1,7 @@
 apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 metadata:
-  name: istio
+  name: test-istio
 spec:
   profile: default
   meshConfig:
@@ -9,7 +9,7 @@ spec:
     enableTracing: true
   components:
     ingressGateways:
-      - name: ingressgateway
+      - name: test-ingressgateway
         enabled: true
         k8s:
           service:
