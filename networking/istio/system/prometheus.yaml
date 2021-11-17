@@ -301,7 +301,7 @@ data:
       rules:
       - record: "workload:istio_requests_total"
         expr: |
-          sum without(instance, kubernetes_namespace, kubernetes_pod_name) (istio_requests_total)
+          sum without(instance, kubernetes_namespace) (istio_requests_total)
       - record: "workload:istio_request_duration_milliseconds_count"
         expr: |
           sum without(instance, kubernetes_namespace, kubernetes_pod_name) (istio_request_duration_milliseconds_count)
@@ -354,10 +354,6 @@ data:
       - record: "workload:istio_tcp_received_bytes_total_bucket"
         expr: |
           sum without(instance, kubernetes_namespace, kubernetes_pod_name) (istio_tcp_received_bytes_total_bucket)
-
-      - record: "workload:istio_requests"
-        expr: |
-          sum without(instance, kubernetes_namespace) (istio_requests_total)
   rules: |
     {}
 ---
