@@ -13,15 +13,15 @@ spec:
         protocol: HTTP2
       hosts:
         - "*"
-      tls:
-        httpsRedirect: true
-#    - port:
-#        number: 443
-#        name: https
-#        protocol: HTTPS
-#      hosts:
-#        - "*"
 #      tls:
-#        mode: 
-#        minProtocolVersion: TLSV1_2
-#        maxProtocolVersion: TLSV1_3
+#        httpsRedirect: true
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      hosts:
+        - "*"
+      tls:
+        mode: ISTIO_MUTUAL
+        minProtocolVersion: TLSV1_2
+        maxProtocolVersion: TLSV1_3
