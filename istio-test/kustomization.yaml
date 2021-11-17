@@ -4,4 +4,4 @@ namespace: istio-test
 resources:
   - podinfo
   - namespace.yaml
-#  - istio
+  - istio
