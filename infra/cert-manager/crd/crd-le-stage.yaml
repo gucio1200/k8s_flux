@@ -3,9 +3,6 @@ kind: ClusterIssuer
 metadata:
   name: letsencrypt-stage
 spec:
-  secretTemplate:
-    annotations:
-      kubed.appscode.com/sync: "cert-manager-tls=ingress"
   acme:
     email: kacper.gogol@gmail.com
     server: https://acme-staging-v02.api.letsencrypt.org/directory
