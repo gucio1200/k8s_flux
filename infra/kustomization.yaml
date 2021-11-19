@@ -9,4 +9,5 @@ resources:
   - reboot-cordinator
   - reloader
   - kubed
+  - kyverno
 #  - ingress-nginx
