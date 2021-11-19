@@ -10,4 +10,5 @@ resources:
   - reloader
   - kubed
   - kyverno
+  - node-problem-detector
 #  - ingress-nginx
