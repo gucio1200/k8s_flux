@@ -21,3 +21,4 @@ resources:
   - appscode.yaml
   - ingress-nginx.yaml
   - deliveryhero-charts.yaml
+  - kyverno.yaml
