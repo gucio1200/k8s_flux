@@ -20,3 +20,4 @@ resources:
   - metrics-server.yaml
   - appscode.yaml
   - ingress-nginx.yaml
+  - deliveryhero-charts.yaml
