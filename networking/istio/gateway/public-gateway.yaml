@@ -10,11 +10,11 @@ spec:
     - port:
         number: 80
         name: http
-        protocol: HTTP2
+        protocol: HTTP
       hosts:
         - "*"
-#      tls:
-#        httpsRedirect: true
+      tls:
+        httpsRedirect: true
     - port:
         number: 443
         name: https
