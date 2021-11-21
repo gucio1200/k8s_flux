@@ -21,10 +21,10 @@ spec:
     podLabels:
       sidecar.istio.io/inject: 'false'
     cainjector:
-      deploymentAnnotations:
+      podAnnotations:
         sidecar.istio.io/inject: 'false'
     webhook:
-      deploymentAnnotations:
+      podAnnotations:
         sidecar.istio.io/inject: 'false'
     startupapicheck:
       jobAnnotations:
