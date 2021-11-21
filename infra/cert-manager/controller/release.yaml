@@ -18,7 +18,6 @@ spec:
       retries: 3
   values:
     installCRDs: true
-    global:
-      podLabels:
-        sidecar.istio.io/inject: 'false'
+    podLabels:
+      sidecar.istio.io/inject: 'false'
     
