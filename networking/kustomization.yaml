@@ -5,3 +5,4 @@ resources:
   - kubelive
   - metallb
   - cloudflare-ddns
+  - cm.yaml
