@@ -20,4 +20,12 @@ spec:
     installCRDs: true
     podLabels:
       sidecar.istio.io/inject: 'false'
-    
+    cainjector:
+      deploymentAnnotations:
+        sidecar.istio.io/inject: 'false'
+    webhook:
+      deploymentAnnotations:
+        sidecar.istio.io/inject: 'false'
+    startupapicheck:
+      jobAnnotations:
+        sidecar.istio.io/inject: 'false'
