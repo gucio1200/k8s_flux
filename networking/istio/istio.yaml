@@ -91,7 +91,7 @@ spec:
   interval: 5m
   path: "./infra/cert-manager/controller"
   prune: true
-  targetNamespace: istio-system
+  targetNamespace: apps
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -114,7 +114,7 @@ spec:
   interval: 5m
   path: "./infra/cert-manager/crd"
   prune: true
-  targetNamespace: istio-system
+  targetNamespace: apps
   sourceRef:
     kind: GitRepository
     name: flux-system
