@@ -27,5 +27,5 @@ spec:
       podAnnotations:
         sidecar.istio.io/inject: 'false'
     startupapicheck:
-      jobAnnotations:
+      podAnnotations:
         sidecar.istio.io/inject: 'false'
