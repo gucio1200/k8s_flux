@@ -10,7 +10,7 @@ spec:
   interval: 5m
   path: "./infra/cert-manager/controller"
   prune: true
-  targetNamespace: istio-system
+  targetNamespace: apps
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -19,7 +19,7 @@ spec:
     - apiVersion: apps/v1
       kind: Deployment
       name: cert-manager
-      namespace: istio-system
+      namespace: apps
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -33,7 +33,7 @@ spec:
   interval: 5m
   path: "./infra/cert-manager/crd"
   prune: true
-  targetNamespace: istio-system
+  targetNamespace: apps
   sourceRef:
     kind: GitRepository
     name: flux-system
