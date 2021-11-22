@@ -7,8 +7,6 @@ metadata:
 spec:
   timeout: 5m0s
   interval: 10m0s
-  dependsOn:
-    - name: istio-system
   path: "./infra/cert-manager/controller"
   prune: true
   validation: client
