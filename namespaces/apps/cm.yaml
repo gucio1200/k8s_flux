@@ -19,6 +19,7 @@ spec:
     - apiVersion: apps/v1
       kind: Deployment
       name: cert-manager
+      namespace: apps
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
