@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - weave
   - starboard
-  - ceph-storage
+  - glusterfs-storage
   - descheduler
   - garbage
   - reboot-cordinator
@@ -11,4 +11,3 @@ resources:
   - kubed
   - kyverno
   - node-problem-detector
-#  - ingress-nginx

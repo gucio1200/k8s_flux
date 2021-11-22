@@ -7,10 +7,9 @@ metadata:
 spec:
   timeout: 5m0s
   interval: 10m0s
-  path: "./infra/cert-manager/controller"
+  path: "./namespaces/apps/cert-manager/controller"
   prune: true
   validation: client
-  targetNamespace: apps
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -31,10 +30,9 @@ spec:
   timeout: 5m
   dependsOn:
     - name: cert-manager
-  path: "./infra/cert-manager/crd"
+  path: "./namespaces/apps/cert-manager/crd"
   prune: true
   validation: client
-  targetNamespace: apps
   sourceRef:
     kind: GitRepository
     name: flux-system
