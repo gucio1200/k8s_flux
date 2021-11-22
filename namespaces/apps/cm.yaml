@@ -8,6 +8,7 @@ spec:
   timeout: 5m0s
   interval: 10m0s
   path: "./namespaces/apps/cert-manager/controller"
+  targetNamespace: apps
   prune: true
   validation: client
   sourceRef:
@@ -30,6 +31,7 @@ spec:
   dependsOn:
     - name: cert-manager
   path: "./namespaces/apps/cert-manager/crd"
+  targetNamespace: apps
   prune: true
   validation: client
   sourceRef:
