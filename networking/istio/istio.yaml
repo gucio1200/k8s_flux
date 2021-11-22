@@ -4,6 +4,7 @@ metadata:
   name: istio-operator
   namespace: flux-system
 spec:
+  timeout: 5m0s
   interval: 10m0s
   sourceRef:
     kind: GitRepository
@@ -27,6 +28,7 @@ metadata:
 spec:
   dependsOn:
     - name: istio-operator
+  timeout: 5m0s
   interval: 10m0s
   sourceRef:
     kind: GitRepository
@@ -70,6 +72,7 @@ metadata:
 spec:
   dependsOn:
     - name: istio-system
+  timeout: 5m0s
   interval: 10m0s
   sourceRef:
     kind: GitRepository
