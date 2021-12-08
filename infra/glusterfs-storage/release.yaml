@@ -7,6 +7,7 @@ spec:
   releaseName: glusterfs-client
   chart:
     spec:
+      # renovate: registryUrl=https://olli-ai.github.io/helm-charts
       chart: glusterfs-client-provisioner
       version: 1.0.2
       sourceRef:
