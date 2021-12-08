@@ -11,6 +11,8 @@ spec:
   components:
     pilot:
       k8s:
+        hpaSpec:
+          minReplicas: 2
         strategy:
           type: RollingUpdate
           rollingUpdate:
@@ -41,6 +43,8 @@ spec:
         namespace: apps
         enabled: true
         k8s:
+          hpaSpec:
+            minReplicas: 2
           strategy:
             type: RollingUpdate
             rollingUpdate:
