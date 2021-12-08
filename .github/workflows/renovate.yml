@@ -28,6 +28,7 @@ jobs:
         branch: helm-release-annotations
         title: "[renovate] create helmrelease annotations [ci-skip]"
         signoff: true
+        delete-branch: true
         committer: "gucio1200 <gucio1200@users.noreply.github.com>"
         author: "gucio1200 <gucio1200@users.noreply.github.com>"
         commit-message: Create renovatebot helmrelease annotations
