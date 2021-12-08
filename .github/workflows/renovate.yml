@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        fetch-depth: 1
 
     - name: Install yq
       run: |
@@ -33,6 +31,7 @@ jobs:
         committer: "gucio1200 <gucio1200@users.noreply.github.com>"
         author: "gucio1200 <gucio1200@users.noreply.github.com>"
         commit-message: Create renovatebot helmrelease annotations
+        assignees: "gucio1200"
         body: |
           Signed-off-by: gucio1200 <gucio1200@users.noreply.github.com>
         labels: renovate/helm-release-annotations
