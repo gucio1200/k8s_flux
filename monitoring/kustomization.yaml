@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: monitoring
 resources:
   - namespace.yaml
-  - metrics-server/release.yaml
-  - prom-adapter/release.yaml
+  - metrics-server
+  - prom-adapter
   - prom
