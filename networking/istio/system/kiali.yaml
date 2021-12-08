@@ -443,7 +443,7 @@ spec:
     spec:
       serviceAccountName: kiali
       containers:
-      - image: "quay.io/kiali/kiali:v1.38"
+      - image: "quay.io/kiali/kiali:v1.44"
         imagePullPolicy: Always
         name: kiali
         command:
