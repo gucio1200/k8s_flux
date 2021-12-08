@@ -29,7 +29,7 @@ spec:
       image:
         repository: bsctl/keepalived
         pullPolicy: IfNotPresent
-        tag: '0.2.0'
+        tag: '0.3.0'
       resources:
         limits:
           cpu: 200m
