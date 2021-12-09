@@ -25,5 +25,5 @@ spec:
       httpPort: 9898
     podAnnotations:
       prometheus.io/path: '/metrics'
-      prometheus.io/port: '9797'
-      prometheus.io/scrape: 'true'
+#      prometheus.io/port: '9797'
+#      prometheus.io/scrape: 'true'
