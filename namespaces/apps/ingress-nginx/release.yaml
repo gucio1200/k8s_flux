@@ -18,6 +18,11 @@ spec:
       retries: 3
   values:
     controller:
+      image:
+        allowPrivilegeEscalation: false
+      scope:
+        enabled: true
+        namespace: "apps"
       podLabels:
         sidecar.istio.io/inject: 'true'
       podAnnotations:
