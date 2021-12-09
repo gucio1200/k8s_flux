@@ -19,9 +19,9 @@ spec:
   values:
     controller:
       podLabels:
-        sidecar.istio.io/inject: 'false'
-      podAnnotations:
-        sidecar.istio.io/inject: 'false'
+        sidecar.istio.io/inject: 'true'
+#      podAnnotations:
+#        sidecar.istio.io/inject: 'false'
       autoscaling:
         enabled: true
       config:
