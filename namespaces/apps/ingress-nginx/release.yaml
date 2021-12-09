@@ -17,6 +17,11 @@ spec:
     remediation:
       retries: 3
   values:
+    admissionWebhooks:
+      annotations:
+        sidecar.istio.io/inject: 'false'
+      labels:
+        sidecar.istio.io/inject: 'false'
     controller:
       podLabels:
         sidecar.istio.io/inject: 'false'
