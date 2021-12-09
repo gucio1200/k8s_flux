@@ -17,12 +17,6 @@ spec:
     remediation:
       retries: 3
   values:
-    admissionWebhooks:
-      patch:
-        podAnnotations:
-          sidecar.istio.io/inject: 'false'
-        labels:
-          sidecar.istio.io/inject: 'false'
     controller:
       podLabels:
         sidecar.istio.io/inject: 'false'
@@ -37,6 +31,12 @@ spec:
         requests:
           cpu: 500m
           memory: 500Mi
+      admissionWebhooks:
+        patch:
+          podAnnotations:
+            sidecar.istio.io/inject: 'false'
+          labels:
+            sidecar.istio.io/inject: 'false'
 
 #        prometheus.io/port: '10254'
 #        prometheus.io/scrape: 'true'
