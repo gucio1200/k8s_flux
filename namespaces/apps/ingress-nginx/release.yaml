@@ -21,7 +21,6 @@ spec:
       podLabels:
         sidecar.istio.io/inject: 'true'
       podAnnotations:
-#        sidecar.istio.io/rewriteAppHTTPProbers: "true"
         prometheus.io/port: '10254'
         prometheus.io/scrape: 'true'
         traffic.sidecar.istio.io/includeInboundPorts: ''
@@ -42,9 +41,3 @@ spec:
             sidecar.istio.io/inject: 'false'
           labels:
             sidecar.istio.io/inject: 'false'
-
-#        prometheus.io/port: '10254'
-#        prometheus.io/scrape: 'true'
-#        traffic.sidecar.istio.io/includeInboundPorts: ''
-#        traffic.sidecar.istio.io/excludeInboundPorts: '80,443'
-#        traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
