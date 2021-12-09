@@ -4,7 +4,6 @@ metadata:
   name: ingress-nginx
   namespace: apps
 spec:
-  releaseName: ingress-nginx
   chart:
     spec:
       chart: ingress-nginx
@@ -13,6 +12,7 @@ spec:
         name: ingress-nginx
         namespace: flux-system
   interval: 10m0s
+  timeout: 5m
   install:
     remediation:
       retries: 3
