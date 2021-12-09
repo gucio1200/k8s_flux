@@ -20,8 +20,13 @@ spec:
     controller:
       podLabels:
         sidecar.istio.io/inject: 'true'
-#      podAnnotations:
-#        sidecar.istio.io/inject: 'false'
+      podAnnotations:
+#        sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        prometheus.io/port: '10254'
+        prometheus.io/scrape: 'true'
+        traffic.sidecar.istio.io/includeInboundPorts: ''
+        traffic.sidecar.istio.io/excludeInboundPorts: '80,443'
+        traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
       autoscaling:
         enabled: true
       config:
