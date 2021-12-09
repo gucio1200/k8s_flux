@@ -26,6 +26,7 @@ spec:
         traffic.sidecar.istio.io/includeInboundPorts: ''
         traffic.sidecar.istio.io/excludeInboundPorts: '80,443'
         traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
+        sidecar.istio.io/inject: 'false'
       autoscaling:
         enabled: true
       config:
