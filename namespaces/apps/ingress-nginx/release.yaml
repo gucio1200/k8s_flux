@@ -50,7 +50,7 @@ spec:
       updateStrategy:
         rollingUpdate:
           maxUnavailable: 1
-        type:RollingUpdate
+        type: RollingUpdate
       metrics:
         enabled: true
       admissionWebhooks:
