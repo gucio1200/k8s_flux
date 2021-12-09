@@ -16,12 +16,12 @@ spec:
         name: prometheus-community
         namespace: flux-system
       interval: 5m
-  timeout: 15m
   install:
+    remediation:
+      retries: 3
     crds: Create
   upgrade:
     crds: CreateReplace
   valuesFrom:
     - kind: ConfigMap
       name: prom-values
-
