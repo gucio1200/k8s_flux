@@ -36,7 +36,7 @@ jobs:
   helm-release-diff:
     name: Template Helm Releases
     runs-on: ubuntu-20.04
-    if: ${{ needs.changes.outputs.files != '' }}
+    if: ${{ needs.changes.outputs.files != '[]' }}
     needs:
       - changes
     strategy:
@@ -47,7 +47,7 @@ jobs:
       - uses: yokawasa/action-setup-kube-tools@v0.8.0
         with:
           setup-tools: |
-            helmv3
+            helm
             yq
       - uses: actions/checkout@v2
         with:
