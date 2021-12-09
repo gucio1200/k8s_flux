@@ -23,3 +23,7 @@ spec:
       type: ClusterIP
       metricsPort: 9797
       httpPort: 9898
+    podAnnotations:
+      prometheus.io/path: '/metrics'
+      prometheus.io/port: '9797'
+      prometheus.io/scrape: 'true'
