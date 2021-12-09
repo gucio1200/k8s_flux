@@ -35,14 +35,27 @@ spec:
         enabled: true
       config:
         enable-modsecurity: true
-        enable-owasp-modsecurity: true
+        enable-owasp-modsecurity-crs: true
+        ssl-protocols: TLSv1.2 TLSv1.3
+        modsecurity-snippet: |
+          SecRuleEngine On
+          SecRequestBodyAccess On
+          SecAuditEngine RelevantOnly
+          SecAuditLogParts ABIJDEFHZ
+          SecAuditLog /var/log/modsec_audit.log
       resources:
         requests:
           cpu: 500m
           memory: 500Mi
+      updateStrategy:
+        rollingUpdate:
+          maxUnavailable: 1
+        type:RollingUpdate
+      metrics:
+        enabled: true
       admissionWebhooks:
         patch:
-          podAnnotations:
-            sidecar.istio.io/inject: 'false'
+#          podAnnotations:
+#            sidecar.istio.io/inject: 'false'
           labels:
             sidecar.istio.io/inject: 'false'
