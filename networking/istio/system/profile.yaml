@@ -41,7 +41,7 @@ spec:
     ingressGateways:
       - name: istio-ingressgateway
         namespace: apps
-        enabled: true
+        enabled: false
         k8s:
           hpaSpec:
             minReplicas: 2
