@@ -19,7 +19,7 @@ spec:
   values:
     controller:
       podLabels:
-        sidecar.istio.io/inject: 'true'
+        sidecar.istio.io/inject: 'false'
       podAnnotations:
         prometheus.io/port: '10254'
         prometheus.io/scrape: 'true'
