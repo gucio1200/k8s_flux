@@ -21,6 +21,8 @@ spec:
       podLabels:
         sidecar.istio.io/inject: 'true'
       podAnnotations:
+        prometheus.io/port: '10254'
+        prometheus.io/scrape: 'true'
         traffic.sidecar.istio.io/includeInboundPorts: ''
         traffic.sidecar.istio.io/excludeInboundPorts: '80,443'
       autoscaling:
