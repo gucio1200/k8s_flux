@@ -18,10 +18,7 @@ controller:
     enable-modsecurity: "true"
     enable-owasp-modsecurity-crs: "true"
     configuration-snippet: |
-      ssl_ecdh_curve secp384r1;
-      ssl_session_timeout  10m;
       ssl_session_cache shared:SSL:10m;
-      ssl_session_tickets off;
       ssl_stapling on;
       ssl_stapling_verify on;
       add_header X-Frame-Options DENY;
@@ -37,10 +34,14 @@ controller:
       SecAuditLogFormat JSON
     server-name-hash-bucket-size: "256"
     server-tokens: "false"
-    ssl-ciphers: EECDH+AESGCM:EDH+AESGCM;
+    ssl-ciphers: EECDH+AESGCM:EDH+AESGCM
+    ssl-ecdh-curve: secp384r1
     ssl-prefer-server-ciphers: "true"
     ssl-protocols: TLSv1.1 TLSv1.2
+    ssl-session-timeout: 10m
+    ssl-session-tickets: "false"
     use-http2: "true"
+    enable-brotli: "true"
   resources:
     requests:
       cpu: 500m
