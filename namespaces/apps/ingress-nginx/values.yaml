@@ -15,8 +15,8 @@ controller:
   autoscaling:
     enabled: true
   config:
-    enable-modsecurity: true
-    enable-owasp-modsecurity-crs: true
+    enable-modsecurity: "true"
+    enable-owasp-modsecurity-crs: "true"
     modsecurity-snippet: |
       SecRuleEngine On
       SecRequestBodyAccess On
