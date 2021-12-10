@@ -62,6 +62,26 @@ grafana:
         gnetId: 9614
         revision: 1
         datasource: Prometheus
+      istio-mesh:
+        # Ref: https://grafana.com/dashboards/7639
+        gnetId: 7639
+        revision: 101
+        datasource: Prometheus
+      istio-control-plane:
+        # Ref: https://grafana.com/dashboards/7639
+        gnetId: 7645
+        revision: 101
+        datasource: Prometheus
+      istio-workload:
+        # Ref: https://grafana.com/dashboards/7639
+        gnetId: 7630
+        revision: 101
+        datasource: Prometheus
+      istio-service:
+        # Ref: https://grafana.com/dashboards/7639
+        gnetId: 7636
+        revision: 101
+        datasource: Prometheus
 
 prometheus:
   prometheusSpec:
