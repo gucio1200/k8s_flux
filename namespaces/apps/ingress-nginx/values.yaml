@@ -15,14 +15,14 @@ controller:
     traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
   autoscaling:
     enabled: false
-  autoscalingTemplate:
-    - type: Pods
-      pods:
-       metric:
-          name: nginx_ingress_controller_nginx_process_requests_total
-        target:
-          type: AverageValue
-          averageValue: 2000m
+#  autoscalingTemplate:
+#    - type: Pods
+#      pods:
+#       metric:
+#          name: nginx_ingress_controller_nginx_process_requests_total
+#        target:
+#          type: AverageValue
+#          averageValue: 2000m
   use-forwarded-headers: "true"
   service:
     externalTrafficPolicy: Local
