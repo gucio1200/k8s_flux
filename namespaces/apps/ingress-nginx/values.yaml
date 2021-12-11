@@ -15,6 +15,8 @@ controller:
     traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
   autoscaling:
     enabled: true
+    minReplicas: 1
+    maxReplicas: 11
   autoscalingTemplate:
     - type: Pods
       pods:
