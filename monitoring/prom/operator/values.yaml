@@ -21,6 +21,11 @@ prometheusOperator:
 alertmanager:
   alertmanagerSpec:
     podAntiAffinity: "hard"
+    tolerations:
+      - key: node-role.kubernetes.io/controller
+        effect: NoSchedule
+    nodeSelector:
+      node-role.kubernetes.io/controller: ""
   config:
     global:
       resolve_timeout: 5m
