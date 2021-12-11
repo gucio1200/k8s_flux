@@ -17,6 +17,7 @@ controller:
     enabled: true
     minReplicas: 1
     maxReplicas: 11
+    targetMemoryUtilizationPercentage: 0
   autoscalingTemplate:
     - type: Pods
       pods:
