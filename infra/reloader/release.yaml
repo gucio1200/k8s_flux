@@ -16,3 +16,9 @@ spec:
         name: stakater-charts
         namespace: flux-system
       interval: 5m
+  values:
+    tolerations:
+      - key: node-role.kubernetes.io/controller
+        effect: NoSchedule
+    nodeSelector:
+      node.kubernetes.io/controller: "true"
