@@ -13,8 +13,8 @@ controller:
     traffic.sidecar.istio.io/includeInboundPorts: ''
     traffic.sidecar.istio.io/excludeInboundPorts: '80,443'
     traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
-#  autoscaling:
-#    enabled: true
+  autoscaling:
+    enabled: false
   autoscalingTemplate: []
     - type: Pods
       pods:
