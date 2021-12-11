@@ -23,3 +23,8 @@ spec:
       - --kubelet-insecure-tls
       - --kubelet-use-node-status-port
       - --metric-resolution=15s
+    tolerations:
+      - key: node-role.kubernetes.io/controller
+        effect: NoSchedule
+    nodeSelector:
+      node.kubernetes.io/controller: "true"
