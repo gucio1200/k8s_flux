@@ -26,8 +26,8 @@ controller:
           type: AverageValue
           averageValue: 50000m
   use-forwarded-headers: "true"
-  service:
-    externalTrafficPolicy: Local
+#  service:
+#    externalTrafficPolicy: Local
   config:
     enable-modsecurity: "true"
     enable-owasp-modsecurity-crs: "true"
