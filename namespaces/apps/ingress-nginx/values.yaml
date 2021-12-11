@@ -51,6 +51,7 @@ controller:
       add_header X-XSS-Protection "1; mode=block";
     modsecurity-snippet: |
       SecRuleEngine On
+      Include /etc/nginx/owasp-modsecurity-crs/nginx-modsecurity.conf
       SecRequestBodyAccess On
       SecAuditEngine RelevantOnly
       SecAuditLogType Serial
@@ -58,7 +59,7 @@ controller:
       SecAuditLog /dev/stdout
       SecAuditLogFormat JSON
     enable-modsecurity: "true"
-    enable-owasp-modsecurity-crs: "true"
+#    enable-owasp-modsecurity-crs: "true"
     client-body-buffer-size: "10K"
     server-name-hash-bucket-size: "256"
     server-tokens: "false"
