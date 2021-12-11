@@ -15,6 +15,9 @@ controller:
     traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
   autoscaling:
     enabled: true
+  use-forwarded-headers: "true"
+  service:
+    externalTrafficPolicy: Local
   config:
     enable-modsecurity: "true"
     enable-owasp-modsecurity-crs: "true"
