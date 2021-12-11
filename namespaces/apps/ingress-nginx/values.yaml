@@ -65,11 +65,11 @@ controller:
     ssl-ciphers: EECDH+AESGCM:EDH+AESGCM
     ssl-ecdh-curve: secp384r1
     ssl-prefer-server-ciphers: "true"
-    ssl-protocols: TLSv1.1 TLSv1.2
+    ssl-protocols: TLSv1.2 TLSv1.3
     ssl-session-timeout: 10m
     ssl-session-tickets: "false"
 #    use-http2: "true"
-#    enable-brotli: "true"
+    enable-brotli: "true"
   resources:
     requests:
       cpu: 500m
