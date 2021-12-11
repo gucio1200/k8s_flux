@@ -23,6 +23,13 @@ prometheusOperator:
   nodeSelector:
     node.kubernetes.io/controller: "true"
 
+kube-state-metrics:
+  tolerations:
+    - key: node-role.kubernetes.io/controller
+      effect: NoSchedule
+  nodeSelector:
+    node.kubernetes.io/controller: "true"
+
 alertmanager:
   alertmanagerSpec:
     podAntiAffinity: "hard"
