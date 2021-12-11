@@ -42,4 +42,4 @@ spec:
           name:
             matches: ^(.*)_total
             as: ${1}_per_second
-          metricsQuery: sum(rate(<<.Series>>{.LabelMatchers>>}[2m]))
+          metricsQuery: sum(rate(nginx_ingress_controller_nginx_process_requests_total[2m]))
