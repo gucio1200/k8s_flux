@@ -49,6 +49,11 @@ nodeExporter:
       action: replace
 
 grafana:
+  tolerations:
+    - key: node-role.kubernetes.io/controller
+      effect: NoSchedule
+  nodeSelector:
+    node.kubernetes.io/controller: "true"
   dashboardProviders:
     dashboardproviders.yaml:
       apiVersion: 1
@@ -160,6 +165,11 @@ prometheus:
     retention: 4h
     enableAdminAPI: true
     walCompression: true
+    tolerations:
+      - key: node-role.kubernetes.io/controller
+        effect: NoSchedule
+    nodeSelector:
+      node.kubernetes.io/controller: "true"
     storageSpec:
       volumeClaimTemplate:
         spec:
