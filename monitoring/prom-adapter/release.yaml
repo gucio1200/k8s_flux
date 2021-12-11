@@ -32,3 +32,14 @@ spec:
             matches: ^(.*)_total
             as: ${1}_per_second
           metricsQuery: sum(rate(<<.Series>>{<<.LabelMatchers>>,reporter="destination"}[2m])) by (<<.GroupBy>>)
+
+        - seriesQuery: 'nginx_ingress_controller_nginx_process_requests_total{kubernetes_namespace!="",controller_pod!="",controller_namespace!=""}'
+          resources:
+            overrides:
+              kubernetes_namespace: {resource: "namespace"}
+              controller_namespace: {resource: "namespace"}
+              controller_pod: {resource: "pod"}
+          name:
+            matches: ^(.*)_total
+            as: ${1}_per_second
+          metricsQuery: sum(rate(<<.Series>>{.LabelMatchers>>}[2m]))
