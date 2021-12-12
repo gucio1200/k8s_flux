@@ -465,8 +465,7 @@ spec:
   replicas: 1
   template:
     metadata:
-      annotations:
-        
+      annotations:        
         sidecar.istio.io/inject: "false"
       labels:
         component: "server"
@@ -494,12 +493,11 @@ spec:
             - name: config-volume
               mountPath: /etc/config
               readOnly: true
-
         - name: prometheus-server
           image: "prom/prometheus:v2.31.1"
           imagePullPolicy: "IfNotPresent"
           args:
-            - --storage.tsdb.retention.time=15d
+            - --storage.tsdb.retention.time=7d
             - --config.file=/etc/config/prometheus.yml
             - --storage.tsdb.path=/data
             - --web.console.libraries=/etc/prometheus/console_libraries
