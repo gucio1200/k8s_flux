@@ -46,7 +46,7 @@ controller:
     http-snippet: |
       map $remote_addr $loggable {
           default 1;
-          ~^192.168.0.*$ 0;
+          ~^192.168.*$ 0;
       }
     server-snippet: |
       ssl_session_cache shared:SSL:10m;
