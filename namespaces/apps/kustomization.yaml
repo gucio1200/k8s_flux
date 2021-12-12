@@ -6,3 +6,4 @@ resources:
   - cm.yaml
   - podinfo  
   - ingress-nginx
+  - memcached
