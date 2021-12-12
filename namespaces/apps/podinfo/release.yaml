@@ -17,23 +17,6 @@ spec:
   install:
     remediation:
       retries: 3
-  values:
-    service:
-      enabled: true
-      type: ClusterIP
-      metricsPort: 9797
-      httpPort: 9898
-    ingress:
-      enabled: true
-      className: istio
-      annotations:
-        cert-manager.io/cluster-issuer: letsencrypt
-      hosts:
-        - host: podinfo.ingress.space
-          paths:
-            - path: /
-              pathType: Prefix
-      tls:
-        - secretName: podinfo-cert
-          hosts:
-            - podinfo.ingress.space
+  valuesFrom:
+    - kind: ConfigMap
+      name: podinfo-values
