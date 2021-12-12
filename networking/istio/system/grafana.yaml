@@ -131,6 +131,11 @@ spec:
         fsGroup: 472
         runAsGroup: 472
         runAsUser: 472
+      tolerations:
+        - key: node-role.kubernetes.io/controller
+          effect: NoSchedule
+      nodeSelector:
+        node.kubernetes.io/controller: "true"
       containers:
         - name: grafana
           image: "grafana/grafana:8.3.2"
