@@ -18,6 +18,11 @@ spec:
         prometheus.io/scrape: "true"
         prometheus.io/port: "14269"
     spec:
+      tolerations:
+        - key: node-role.kubernetes.io/controller
+          effect: NoSchedule
+      nodeSelector:
+        node.kubernetes.io/controller: "true"
       containers:
         - name: jaeger
           image: "docker.io/jaegertracing/all-in-one:1.29"
