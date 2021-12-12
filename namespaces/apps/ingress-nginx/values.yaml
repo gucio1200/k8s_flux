@@ -44,11 +44,10 @@ controller:
     loadBalancerIP: 192.168.99.2    
   config:
     http-snippet: |
-      map $remote_addr $logging {
+      map $remote_addr $loggable {
           default 1;
           ~^192.168.0.*$ 0;
       }
-#    access-log-params: "main if=$logging"
     server-snippet: |
       ssl_session_cache shared:SSL:10m;
       ssl_stapling on;
