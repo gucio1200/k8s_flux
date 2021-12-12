@@ -48,7 +48,7 @@ controller:
           default 1;
           ~^192.168.0.*$ 0;
       }
-    access-log-params: "if=$logging"
+    access-log-params: "main if=$logging"
     server-snippet: |
       ssl_session_cache shared:SSL:10m;
       ssl_stapling on;
