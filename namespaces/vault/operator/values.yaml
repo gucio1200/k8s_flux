@@ -1,0 +1,5 @@
+tolerations:
+  - key: node-role.kubernetes.io/controller
+    effect: NoSchedule
+nodeSelector:
+  node.kubernetes.io/controller: "true"
