@@ -70,6 +70,7 @@ controller:
     ssl-session-timeout: 10m
     ssl-session-tickets: "false"
     enable-brotli: "true"
+    global-rate-limit-memcached-host: memcached
   resources:
     requests:
       cpu: 500m
