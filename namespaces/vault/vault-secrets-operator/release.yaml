@@ -31,10 +31,10 @@ spec:
     volumes:
       - name: ca
         secret:
-        secretName: vault-tls
-        items:
-          - key: ca.crt
-            path: ca.crt
+          secretName: vault-tls
+          items:
+            - key: ca.crt
+              path: ca.crt
     environmentVars:
       - name: VAULT_CACERT
         value: "/etc/vault-secrets-operator/ca.crt"
