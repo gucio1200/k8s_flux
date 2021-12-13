@@ -30,3 +30,8 @@ spec:
       kubernetesPath: auth/kubernetes
       kubernetesRole: vault-secrets-operator
       reconciliationTime: "300"
+  valuesFrom:
+  - secretKeyRef:
+      name: vault-tls
+      namespace: vault
+      key: ca.crt
