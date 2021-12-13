@@ -24,14 +24,15 @@ spec:
     replicaCount: 1
     deploymentStrategy:
       type: Recreate
+    environmentVars:
+      - name: VAULT_CACERT
+        valueFrom:
+          secretKeyRef:
+            name: vault-tls
+            key: ca.crt
     vault:
       address: "https://vault:8200"
       authMethod: kubernetes
       kubernetesPath: auth/kubernetes
       kubernetesRole: vault-secrets-operator
       reconciliationTime: "300"
-  valuesFrom:
-  - secretKeyRef:
-      name: vault-tls
-      namespace: vault
-      key: ca.crt
