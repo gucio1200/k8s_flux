@@ -82,7 +82,7 @@ spec:
             ttl: 1h
           - name: vault-secrets-operator
             bound_service_account_names: ["vault-secrets-operator"]
-            bound_service_account_namespaces: ["vault"]
+            bound_service_account_namespaces: ["*"]
             policies: ["vault-secrets-operator"]
             ttl: 1h
 
