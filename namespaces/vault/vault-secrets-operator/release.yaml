@@ -24,12 +24,20 @@ spec:
     replicaCount: 1
     deploymentStrategy:
       type: Recreate
+    image:
+      volumeMounts:
+        - name: ca
+          mountPath: "/etc/vault-secrets-operator"
+    volumes:
+      - name: ca
+        secret:
+        secretName: vault-tls
+        items:
+          - key: ca.crt
+            path: ca.crt
     environmentVars:
       - name: VAULT_CACERT
-        valueFrom:
-          secretKeyRef:
-            name: vault-tls
-            key: ca.crt
+        value: "/etc/vault-secrets-operator/ca.crt"
     vault:
       address: "https://vault:8200"
       authMethod: kubernetes
