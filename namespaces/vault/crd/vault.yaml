@@ -1,0 +1,145 @@
+apiVersion: vault.banzaicloud.com/v1alpha1
+kind: Vault
+metadata:
+  name: vault
+spec:
+  size: 3
+  image: vault:1.6.2
+  bankVaultsImage: ghcr.io/banzaicloud/bank-vaults:latest
+
+  # Common annotations for all created resources
+  annotations:
+    common/annotation: "true"
+
+  # Vault Pods , Services and TLS Secret annotations
+  vaultAnnotations:
+    type/instance: "vault"
+
+  # Vault Configurer Pods and Services annotations
+  vaultConfigurerAnnotations:
+    type/instance: "vaultconfigurer"
+
+  # Vault Pods , Services and TLS Secret labels
+  vaultLabels:
+    example.com/log-format: "json"
+
+  # Vault Configurer Pods and Services labels
+  vaultConfigurerLabels:
+    example.com/log-format: "string"
+
+  serviceAccount: vault
+
+  caNamespaces:
+    - "*"
+
+  unsealConfig:
+    options:
+      preFlightChecks: true
+    kubernetes:
+      secretNamespace: vault
+
+  config:
+    storage:
+      raft:
+        path: /vault/raft
+    listener:
+      tcp:
+        address: "0.0.0.0:8200"
+        tls_cert_file: /vault/tls/server.crt
+        tls_key_file: /vault/tls/server.key
+    telemetry:
+      statsd_address: localhost:9125
+    api_addr: https://vault.vault:8200
+    cluster_addr: "https://${.Env.POD_NAME}:8201"
+    ui: true
+
+  externalConfig:
+    policies:
+      - name: allow_secrets
+        rules: |
+          path "secret/*" {
+            capabilities = ["create", "read", "update", "delete", "list"]
+          }
+          path "pki/*" {
+            capabilities = ["create", "read", "update", "delete", "list"]
+          }
+
+      - name: vault-secrets-operator
+        rules: |
+          path "pki/*" {
+            capabilities = ["read"]
+          }
+          path "secret/*" {
+            capabilities = ["read"]
+          }
+    auth:
+      - type: kubernetes
+        roles:
+          - name: default
+            bound_service_account_names: ["*"]
+            bound_service_account_namespaces: ["*"]
+            policies: ["allow_secrets"]
+            ttl: 1h
+          - name: vault-secrets-operator
+            bound_service_account_names: ["vault-secrets-operator"]
+            bound_service_account_namespaces: ["vault"]
+            policies: ["vault-secrets-operator"]
+            ttl: 1h
+
+    secrets:
+      - path: secret
+        type: kv
+        description: General secrets.
+        options:
+          version: 2
+
+      - type: pki
+        description: Vault PKI Backend
+        config:
+          default_lease_ttl: 168h
+          max_lease_ttl: 720h
+        configuration:
+          config:
+          - name: urls
+            issuing_certificates: https://vault.vault:8200/v1/pki/ca
+            crl_distribution_points: https://vault.vault:8200/v1/pki/crl
+          root/generate:
+          - name: internal
+            common_name: vault.vault
+          roles:
+          - name: default
+            allowed_domains: localhost,pod,svc,vault
+            allow_subdomains: true
+            generate_lease: true
+            ttl: 1m
+
+  vaultEnvsConfig:
+    - name: VAULT_LOG_LEVEL
+      value: debug
+
+  serviceRegistrationEnabled: true
+
+  resources:
+    vault:
+      limits:
+        memory: "512Mi"
+        cpu: "200m"
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
+
+  istioEnabled: false
+
+  volumeMounts:
+    - name: vault-raft
+      mountPath: /vault/raft
+
+  volumeClaimTemplates:
+    - metadata:
+        name: vault-raft
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 512m
