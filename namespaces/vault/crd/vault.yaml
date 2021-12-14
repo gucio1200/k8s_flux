@@ -38,9 +38,6 @@ spec:
     kubernetes:
       secretNamespace: vault
 
-  strategy:
-    type: RollingUpdate
-
   config:
     storage:
       raft:
