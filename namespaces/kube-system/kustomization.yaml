@@ -9,3 +9,4 @@ resources:
   - kubed
   - node-problem-detector
   - kubelive
+  - coredns
