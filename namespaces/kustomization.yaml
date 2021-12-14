@@ -11,4 +11,4 @@ resources:
   - monitoring
   - starboard
   - weave
-#  - authentik
+  - authentik
