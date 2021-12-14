@@ -23,14 +23,16 @@ spec:
       remediateLastFailure: false
   values:
     installCRDs: true
+     podAnnotations:
+       traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32
 #    podLabels:
 #      sidecar.istio.io/inject: 'false'
-    cainjector:
-      podAnnotations:
-        sidecar.istio.io/inject: 'false'
-    webhook:
-      podAnnotations:
-        sidecar.istio.io/inject: 'false'
+#    cainjector:
+#      podAnnotations:
+#        sidecar.istio.io/inject: 'false'
+#    webhook:
+#      podAnnotations:
+#        sidecar.istio.io/inject: 'false'
     startupapicheck:
       podAnnotations:
         sidecar.istio.io/inject: 'false'
