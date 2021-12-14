@@ -13,6 +13,7 @@ ingress:
     nginx.ingress.kubernetes.io/upstream-vhost: authentik.apps.svc.cluster.local
     nginx.ingress.kubernetes.io/modsecurity-snippet: |
       SecRuleEngine On
+      SecRuleRemoveById 949110
     nginx.ingress.kubernetes.io/server-snippet: |
       proxy_ssl_name authentik.ingress.space;
       proxy_ssl_server_name on;
