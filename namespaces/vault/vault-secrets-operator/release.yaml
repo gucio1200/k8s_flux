@@ -38,6 +38,11 @@ spec:
     environmentVars:
       - name: VAULT_CACERT
         value: "/etc/vault-secrets-operator/ca.crt"
+    tolerations:
+      - key: node-role.kubernetes.io/controller
+        effect: NoSchedule
+    nodeSelector:
+      node.kubernetes.io/controller: "true"
     vault:
       address: "https://vault:8200"
       authMethod: kubernetes
