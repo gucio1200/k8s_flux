@@ -84,7 +84,7 @@ spec:
             bound_service_account_names: ["vault-secrets-operator"]
             bound_service_account_namespaces: ["*"]
             policies: ["vault-secrets-operator"]
-            ttl: 1h
+            ttl: 24h
 
     secrets:
       - path: secret
