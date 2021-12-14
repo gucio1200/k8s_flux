@@ -6,7 +6,7 @@ ingress:
   enabled: true
   ingressClassName: "nginx"
   annotations:
-    cert-manager.io/cluster-issuer: le-nginx
+    cert-manager.io/cluster-issuer: le-nginx-stage
     ingress.kubernetes.io/ssl-passthrough: "false"
     kubernetes.io/load-balance: ip_hash
     nginx.ingress.kubernetes.io/service-upstream: "true"
