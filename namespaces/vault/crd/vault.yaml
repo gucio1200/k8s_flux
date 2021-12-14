@@ -124,6 +124,28 @@ spec:
       effect: NoSchedule
   nodeSelector:
     node.kubernetes.io/controller: "true"
+
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+              - key: app.kubernetes.io/name
+                operator: In
+                values:
+                  - vault
+          topologyKey: kubernetes.io/hostname
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 1
+          podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/name
+                  operator: In
+                  values:
+                    - vault
+            topologyKey: failure-domain.beta.kubernetes.io/zone
+
   resources:
     vault:
       limits:
