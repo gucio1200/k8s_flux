@@ -1,15 +1,15 @@
 installCRDs: true
-podAnnotations:
-  traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
+#podAnnotations:
+#  traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
 #    podLabels:
 #      sidecar.istio.io/inject: 'false'
-cainjector:
-  podAnnotations:
-    traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
-webhook:
-  podAnnotations:
-    traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
+#cainjector:
+#  podAnnotations:
+#    traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
+#webhook:
+#  podAnnotations:
+#    traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
 startupapicheck:
   podAnnotations:
-    traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
+#    traffic.sidecar.istio.io/excludeOutboundIPRanges: 10.3.0.1/32,192.168.99.2/32
     sidecar.istio.io/inject: 'false'
