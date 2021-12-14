@@ -4,6 +4,7 @@ namespace: apps
 resources:
   - namespace.yaml
   - cm.yaml
+  - authentik
   - podinfo  
   - ingress-nginx
   - memcached

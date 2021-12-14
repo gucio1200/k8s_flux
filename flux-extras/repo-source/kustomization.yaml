@@ -24,3 +24,4 @@ resources:
   - kyverno.yaml
   - authelia.yaml
   - ricoberger-charts.yaml
+  - authentik-charts.yaml
