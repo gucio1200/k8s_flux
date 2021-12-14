@@ -43,11 +43,11 @@ controller:
     externalTrafficPolicy: Local
     loadBalancerIP: 192.168.99.2    
   config:
-    http-snippet: |
-      map $remote_addr $loggable {
-          default 1;
-          ~^192.168.*$ 0;
-      }
+#    http-snippet: |
+#      map $remote_addr $loggable {
+#          default 1;
+#          ~^192.168.*$ 0;
+#      }
     server-snippet: |
       ssl_session_cache shared:SSL:10m;
       ssl_stapling on;
