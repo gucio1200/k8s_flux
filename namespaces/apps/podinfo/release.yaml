@@ -15,6 +15,7 @@ spec:
       version: ">=1.0.0-alpha"
   interval: 10m
   timeout: 5m
+  prune: yes
   install:
     remediation:
       retries: 3
