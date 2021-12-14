@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   interval: 5m
-  path: "./monitoring/prom/operator"
+  path: "./namespaces/monitoring/prom/operator"
   prune: true
   sourceRef:
     kind: GitRepository
@@ -22,7 +22,7 @@ spec:
   dependsOn:
     - name: prom-operator
   interval: 5m
-  path: "./monitoring/prom/crd"
+  path: "./namespaces/monitoring/prom/crd"
   prune: true
   sourceRef:
     kind: GitRepository
