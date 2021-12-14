@@ -16,56 +16,10 @@ spec:
         name: authentik-charts
         namespace: flux-system
       interval: 5m
-  values:
-    image:
-      repository: ghcr.io/goauthentik/server
-      tag: 2021.10.4
-
-    ingress:
-      enabled: false
-      ingressClassName: "nginx"
-      annotations:
-
-      hosts:
-      - host: authentik.ingress.space
-        paths:
-        - path: /
-
-      tls:
-      - secretName: authentik.ingress.space
-        hosts:
-        - authentik.ingress.space
-
-    geoip:
-      enabled: false
-    authentik:
-      secret_key: 11111111111
-      log_level: debug
-
-      outposts:
-        docker_image_base: ghcr.io/goauthentik/%(type)s:%(version)s
-
-      postgresql:
-        host: '{{ .Release.Name }}-postgresql'
-        name: authentik
-        user: authentik
-        password: password
-      redis:
-        host: '{{ .Release.Name }}-redis-master'
-        password: password
-
-    postgresql:
-      enabled: true
-      persistence:
-        enabled: true
-
-      postgresqlUsername: authentik
-      postgresqlDatabase: authentik
-      postgresqlPassword: password
-
-    redis:
-      enabled: true
-      auth:
-        enabled: true
-        password: password
-
+  valuesFrom:
+    - kind: ConfigMap
+      name: authentik-values
+    - kind: Secret
+      name: authentik-config
+      valuesKey: config
+      optional: false

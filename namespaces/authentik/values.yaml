@@ -1,0 +1,39 @@
+image:
+  repository: ghcr.io/goauthentik/server
+  tag: 2021.10.4
+
+ingress:
+  enabled: false
+  ingressClassName: "nginx"
+  annotations:
+
+  hosts:
+  - host: authentik.ingress.space
+    paths:
+    - path: /
+
+  tls:
+  - secretName: authentik.ingress.space
+    hosts:
+    - authentik.ingress.space
+
+geoip:
+  enabled: false
+authentik:
+  log_level: debug
+
+  outposts:
+    docker_image_base: ghcr.io/goauthentik/%(type)s:%(version)s
+
+  postgresql:
+    host: '{{ .Release.Name }}-postgresql'
+  redis:
+    host: '{{ .Release.Name }}-redis-master'
+
+postgresql:
+  enabled: true
+  persistence:
+    enabled: true
+
+redis:
+  enabled: true
