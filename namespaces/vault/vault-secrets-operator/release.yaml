@@ -44,7 +44,7 @@ spec:
     nodeSelector:
       node.kubernetes.io/controller: "true"
     vault:
-      address: "https://vault:8200"
+      address: "https://vault.vault:8200"
       authMethod: kubernetes
       kubernetesPath: auth/kubernetes
       kubernetesRole: vault-secrets-operator
