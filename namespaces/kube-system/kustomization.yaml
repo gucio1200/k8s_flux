@@ -8,3 +8,4 @@ resources:
   - reloader
   - kubed
   - node-problem-detector
+  - kubelive
