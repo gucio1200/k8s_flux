@@ -38,6 +38,9 @@ spec:
     kubernetes:
       secretNamespace: vault
 
+  strategy:
+    type: RollingUpdate
+
   config:
     storage:
       raft:
@@ -119,6 +122,11 @@ spec:
 
   serviceRegistrationEnabled: true
 
+  tolerations:
+    - key: node-role.kubernetes.io/controller
+      effect: NoSchedule
+  nodeSelector:
+    node.kubernetes.io/controller: "true"
   resources:
     vault:
       limits:
