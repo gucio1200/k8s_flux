@@ -19,7 +19,7 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: authentik-values
-#    - kind: Secret
-#      name: authentik-config
-#      valuesKey: config
-#      optional: false
+    - kind: Secret
+      name: authentik-config
+      valuesKey: config
+      optional: false
