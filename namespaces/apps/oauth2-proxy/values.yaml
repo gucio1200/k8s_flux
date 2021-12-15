@@ -25,7 +25,7 @@ ingress:
 extraArgs:
   provider: oidc
   oidc-issuer-url: https://linuxology.eu.auth0.com/
-  redirect-url: /oauth2/callback
+  redirect-url: https://auth.ingress.space/oauth2/callback
   skip-provider-button:
   pass-authorization-header:
   set-xauthrequest: "true"
