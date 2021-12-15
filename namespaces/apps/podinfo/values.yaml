@@ -10,8 +10,8 @@ ingress:
     cert-manager.io/cluster-issuer: le-nginx
     ingress.kubernetes.io/ssl-passthrough: "false"
     kubernetes.io/load-balance: ip_hash
-#    nginx.ingress.kubernetes.io/service-upstream: "true"
-#    nginx.ingress.kubernetes.io/upstream-vhost: podinfo.apps.svc.cluster.local
+    nginx.ingress.kubernetes.io/service-upstream: "true"
+    nginx.ingress.kubernetes.io/upstream-vhost: podinfo.apps.svc.cluster.local
     nginx.ingress.kubernetes.io/modsecurity-snippet: |
       SecRuleEngine On
     nginx.ingress.kubernetes.io/server-snippet: |
