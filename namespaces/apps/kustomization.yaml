@@ -8,3 +8,4 @@ resources:
   - ingress-nginx
   - memcached
 #  - authentik
+  - oauth2-proxy
