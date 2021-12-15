@@ -15,14 +15,14 @@ ingress:
     nginx.ingress.kubernetes.io/modsecurity-snippet: |
       SecRuleEngine On
     nginx.ingress.kubernetes.io/server-snippet: |
-      proxy_ssl_name pod.ingress.space;
+      proxy_ssl_name pod-info.ingress.space;
       proxy_ssl_server_name on;
   hosts:
-    - host: pod.ingress.space
+    - host: pod-info.ingress.space
       paths:
         - path: /
           pathType: Prefix
   tls:
-    - secretName: pod-cert
+    - secretName: pod-info-cert
       hosts:
-        - pod.ingress.space
+        - pod-info.ingress.space
