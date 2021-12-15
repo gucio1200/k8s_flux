@@ -25,11 +25,15 @@ ingress:
 extraArgs:
   provider: oidc
   oidc-issuer-url: https://linuxology.eu.auth0.com/
+  redirect-url: /oauth2/callback
+  audience: "API audience"
   skip-provider-button:
   pass-authorization-header:
+  set-xauthrequest: "true"
+  pass-access-token: "true"
   email-domain: "*"
   cookie-domain: .ingress.space
-  whitelist-domain: .ingress.space
+  whitelist-domain: .ingress.space .apps.svc.cluster.local
 affinity:
   podAntiAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
