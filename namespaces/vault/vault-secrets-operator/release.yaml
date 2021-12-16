@@ -46,6 +46,8 @@ spec:
         value: "150"
       - name: VAULT_TOKEN_MAX_TTL
         value: "150"
+      - name: VAULT_RENEW_TOKEN
+        value: "150"
     tolerations:
       - key: node-role.kubernetes.io/controller
         effect: NoSchedule
