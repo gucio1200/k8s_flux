@@ -31,9 +31,9 @@ configMap:
       database_index: 0
   notifier:
     smtp:
-      enabled: true
-    filesystem:
       enabled: false
+    filesystem:
+      enabled: true
   authentication_backend:
     ldap:
       enabled: false
