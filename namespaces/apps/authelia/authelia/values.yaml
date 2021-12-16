@@ -29,6 +29,9 @@ configMap:
     redis:
       enabled: true
       database_index: 0
+  notifier:
+    smtp:
+      enabled: false
   authentication_backend:
     ldap:
       enabled: false
