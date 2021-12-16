@@ -42,6 +42,8 @@ spec:
         value: "30"
       - name: VAULT_TOKEN_RENEWAL_INTERVAL
         value: "150"
+      - name: VAULT_TOKEN_LEASE_DURATION
+        value: "150"
     tolerations:
       - key: node-role.kubernetes.io/controller
         effect: NoSchedule
