@@ -44,6 +44,8 @@ spec:
         value: "150"
       - name: VAULT_TOKEN_LEASE_DURATION
         value: "150"
+      - name: VAULT_TOKEN_MAX_TTL
+        value: "150"
     tolerations:
       - key: node-role.kubernetes.io/controller
         effect: NoSchedule
