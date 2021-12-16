@@ -29,3 +29,9 @@ configMap:
     redis:
       enabled: true
       database_index: 0
+  authentication_backend:
+    ldap:
+      enabled: false
+    file:
+      enabled: false
+    
