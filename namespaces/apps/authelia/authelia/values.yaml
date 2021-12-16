@@ -20,6 +20,8 @@ ingress:
   subdomain: auth
 configMap:
   enabled: true
+  log:
+    level: debug
   access_control:
     default_policy: one_factor
   storage:
