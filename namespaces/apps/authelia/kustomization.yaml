@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: apps
 resources:
   - redis
-#  - postgres
+  - postgres
