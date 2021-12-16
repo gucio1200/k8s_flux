@@ -1,0 +1,31 @@
+domain: ingress.space
+ingress:
+  enabled: true
+  className: nginx
+  tls:
+    enabled: true
+    secret: authelia-cert
+  annotations:
+    cert-manager.io/cluster-issuer: le-nginx
+    ingress.kubernetes.io/ssl-passthrough: "false"
+    kubernetes.io/load-balance: ip_hash
+    nginx.ingress.kubernetes.io/service-upstream: "true"
+    nginx.ingress.kubernetes.io/upstream-vhost: authelia.apps.svc.cluster.local
+    nginx.ingress.kubernetes.io/modsecurity-snippet: |
+      SecRuleEngine On
+      SecRuleRemoveById 949110
+    nginx.ingress.kubernetes.io/server-snippet: |
+      proxy_ssl_name auth.ingress.space;
+      proxy_ssl_server_name on;
+  subdomain: auth
+configMap:
+  enabled: true
+  access_control:
+    default_policy: one_factor
+  storage:
+    postgres:
+      enabled: true
+  session:
+    redis:
+      enabled: true
+      database_index: 0

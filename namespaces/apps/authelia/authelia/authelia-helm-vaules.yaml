@@ -1,0 +1,10 @@
+apiVersion: ricoberger.de/v1alpha1
+kind: VaultSecret
+metadata:
+  name: authelia-helm-values
+  namespace: apps
+spec:
+  keys:
+    - authelia-helm-values
+  path: secret/apps/authelia
+  type: Opaque
