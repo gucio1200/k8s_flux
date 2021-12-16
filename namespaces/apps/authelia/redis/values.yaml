@@ -1,0 +1,10 @@
+master:
+  persistence:
+    enabled: true
+replica:
+  replicaCount: 0
+metrics:
+  enabled: true
+auth:
+  existingSecret: authelia-redis-password
+  existingSecretPasswordKey: redis-password
