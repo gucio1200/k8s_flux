@@ -26,3 +26,4 @@ resources:
   - ricoberger-charts.yaml
   - authentik-charts.yaml
   - oauth2-proxy-charts.yaml
+  - bokysan.yaml

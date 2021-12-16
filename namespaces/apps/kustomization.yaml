@@ -8,5 +8,6 @@ resources:
   - ingress-nginx
   - memcached
   - authelia
+  - postfix
 #  - authentik
 #  - oauth2-proxy
