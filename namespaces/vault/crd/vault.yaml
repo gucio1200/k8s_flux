@@ -93,7 +93,7 @@ spec:
             bound_service_account_names: ["vault-secrets-operator"]
             bound_service_account_namespaces: ["vault"]
             policies: ["vault-secrets-operator"]
-            ttl: 24h
+            ttl: 1m
     secrets:
       - path: secret
         type: kv
