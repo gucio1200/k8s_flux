@@ -36,5 +36,5 @@ configMap:
     ldap:
       enabled: false
     file:
-      enabled: false
+      enabled: true
     
