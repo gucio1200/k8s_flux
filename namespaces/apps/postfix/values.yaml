@@ -1,3 +1,4 @@
 config:
   general:
     INBOUND_DEBUGGING: "true"
+    POSTFIX_mynetworks: "0.0.0.0/0"
