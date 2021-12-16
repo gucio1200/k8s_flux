@@ -39,4 +39,5 @@ configMap:
       enabled: false
     file:
       enabled: true
-    
+persistence:
+  enabled: true
