@@ -91,9 +91,9 @@ spec:
             ttl: 1h
           - name: vault-secrets-operator
             bound_service_account_names: ["vault-secrets-operator"]
-            bound_service_account_namespaces: ["*"]
+            bound_service_account_namespaces: ["vault"]
             policies: ["vault-secrets-operator"]
-
+            ttl: 24h
     secrets:
       - path: secret
         type: kv
