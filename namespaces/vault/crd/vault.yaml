@@ -72,6 +72,15 @@ spec:
           path "secret/*" {
             capabilities = ["read"]
           }
+          path "apps/*" {
+            capabilities = ["read"]
+          }
+          path "auth/token/lookup-self" {
+            capabilities = ["read"]
+          }
+          path "auth/token/renew-self" {
+            capabilities = ["update"]
+          }
     auth:
       - type: kubernetes
         roles:
@@ -84,7 +93,6 @@ spec:
             bound_service_account_names: ["vault-secrets-operator"]
             bound_service_account_namespaces: ["*"]
             policies: ["vault-secrets-operator"]
-            ttl: 24h
 
     secrets:
       - path: secret
