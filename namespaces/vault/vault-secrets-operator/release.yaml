@@ -39,13 +39,13 @@ spec:
       - name: VAULT_CACERT
         value: "/etc/vault-secrets-operator/ca.crt"
       - name: VAULT_TOKEN_RENEWAL_RETRY_INTERVAL
-        value: "30"
+        value: 30
       - name: VAULT_TOKEN_RENEWAL_INTERVAL
-        value: "150"
+        value: 150
       - name: VAULT_TOKEN_LEASE_DURATION
-        value: "150"
+        value: 150
       - name: VAULT_TOKEN_MAX_TTL
-        value: "150"
+        value: 150
       - name: VAULT_RENEW_TOKEN
         value: "true"
     tolerations:
