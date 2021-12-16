@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: authelia
+spec:
+  hosts:
+    - auth.ingress.space
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: authelia.apps.svc.cluster.local
