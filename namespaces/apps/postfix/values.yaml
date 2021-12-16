@@ -1,0 +1,3 @@
+config:
+  general:
+    DKIM_AUTOGENERATE: "true"
