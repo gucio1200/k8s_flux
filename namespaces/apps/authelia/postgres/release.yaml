@@ -16,12 +16,6 @@ spec:
         name: bitnami
         namespace: flux-system
       interval: 5m
-  values:
-    persistence:
-      enabled: true
-      existingClaim: "authelia-postgres-data"
-    postgresqlUsername: authelia
-    postgresqlDatabase: authelia
   valuesFrom:
     - kind: ConfigMap
       name: postgres-authelia-values
