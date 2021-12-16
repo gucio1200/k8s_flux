@@ -1,3 +1,4 @@
 config:
   general:
+    ALLOWED_SENDER_DOMAINS: "ingress.space"
     DKIM_AUTOGENERATE: "true"
