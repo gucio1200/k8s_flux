@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: tcp-policy
+  namespace: apps
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: postfix 
+  action: ALLOW
+  rules:
+  - to:
+    - operation:
+       ports: ["587"]
