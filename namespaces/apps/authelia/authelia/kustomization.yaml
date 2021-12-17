@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: apps
 resources:
   - authelia-helm-vaules.yaml
-  - release.yaml
+#  - release.yaml
   - istio_vs.yaml
 configMapGenerator:
   - name: authelia-values
