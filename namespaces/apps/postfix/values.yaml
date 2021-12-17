@@ -1,3 +1,5 @@
+fullnameOverride: postfix
+
 certs:
   create: true
 
