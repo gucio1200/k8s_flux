@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: apps
 resources:
   - postfix-helm-values.yaml
-#  - release.yaml
+  - release.yaml
 configMapGenerator:
   - name: postfix-values
     files:
