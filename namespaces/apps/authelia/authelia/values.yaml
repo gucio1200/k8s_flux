@@ -32,10 +32,11 @@ configMap:
       enabled: true
       database_index: 0
   notifier:
-    smtp:
-      enabled: true
     filesystem:
       enabled: false
+    smtp:
+      enabled: true
+      disable_require_tls: true
   authentication_backend:
     ldap:
       enabled: false
