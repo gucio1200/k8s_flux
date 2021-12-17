@@ -10,5 +10,4 @@ config:
     POSTFIX_smtpd_client_restrictions: "permit_mynetworks"
     POSTFIX_smtp_sasl_security_options: "noanonymous"
     POSTFIX_smtp_tls_loglevel: "1"
-    POSTFIX_inet_interfaces: "all"
 
