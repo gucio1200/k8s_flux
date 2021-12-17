@@ -1,3 +1,9 @@
+certs:
+  create: true
+
+service:
+  port: 25
+
 config:
   general:
     INBOUND_DEBUGGING: "true"
