@@ -1,8 +1,5 @@
 fullnameOverride: postfix
 
-certs:
-  create: true
-
 service:
   port: 25
 
