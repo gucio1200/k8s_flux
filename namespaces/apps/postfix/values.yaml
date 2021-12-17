@@ -1,10 +1,6 @@
 certs:
   create: true
 
-mountSecret:
-  enabled: true
-  path: /var/lib/secret
-
 service:
   port: 25
 
