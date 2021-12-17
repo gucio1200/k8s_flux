@@ -1,6 +1,10 @@
 certs:
   create: true
 
+mountSecret:
+  enabled: true
+  path: /var/lib/secret
+
 service:
   port: 25
 
@@ -12,3 +16,4 @@ config:
     POSTFIX_smtp_sasl_security_options: "noanonymous"
     POSTFIX_smtp_tls_loglevel: "1"
     POSTFIX_inet_interfaces: "all"
+
