@@ -34,6 +34,7 @@ configMap:
   notifier:
     smtp:
       enabled: true
+      disable_require_tls: false
     filesystem:
       enabled: false
   authentication_backend:
