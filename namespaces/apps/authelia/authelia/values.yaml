@@ -40,6 +40,7 @@ configMap:
   authentication_backend:
     ldap:
       enabled: true
+      url: ldap://openldap-openldap-stack-ha.apps.svc.cluster.local
       start_tls: true
       tls:
         skip_verify: true
