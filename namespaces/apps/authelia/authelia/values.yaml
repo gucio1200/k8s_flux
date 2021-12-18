@@ -36,6 +36,8 @@ configMap:
     smtp:
       enabled: true
       disable_require_tls: true
+  #default_redirection_url: https://example.com
+  theme: dark
   authentication_backend:
     ldap:
       enabled: true      
@@ -55,11 +57,11 @@ configMap:
       enabled: false
   access_control:
     default_policy: deny
-    rules:
-      - domain: "*.ingress.space"
-        subject:
-          - "group:admins"
-        policy: one_factor
+#    rules:
+#      - domain: "*.ingress.space"
+#        subject:
+#          - "group:admins"
+#        policy: one_factor
   totp:
     issuer: "ingress.space"
 persistence:
