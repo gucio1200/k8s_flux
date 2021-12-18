@@ -39,8 +39,8 @@ configMap:
       disable_require_tls: true
   authentication_backend:
     ldap:
-      enabled: false
-    file:
       enabled: true
+    file:
+      enabled: false
 persistence:
   enabled: true
