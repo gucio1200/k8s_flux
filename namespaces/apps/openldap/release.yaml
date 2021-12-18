@@ -8,6 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
+      # renovate: registryUrl=https://jp-gouin.github.io/helm-openldap/
       chart: openldap-stack-ha
       version: v2.1.6
       sourceRef:
