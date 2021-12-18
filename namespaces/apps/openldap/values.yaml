@@ -1,3 +1,5 @@
+replicaCount: 1
+
 env:
  LDAP_LOG_LEVEL: "256"
  LDAP_ORGANISATION: "linuxology"
