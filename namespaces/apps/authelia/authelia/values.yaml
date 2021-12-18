@@ -38,8 +38,7 @@ configMap:
       disable_require_tls: true
   authentication_backend:
     ldap:
-      enabled: true
-      
+      enabled: true      
       start_tls: true
       tls:
         skip_verify: true
