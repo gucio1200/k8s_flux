@@ -8,7 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      # renovate: registryUrl=https://charts.authelia.com
+      # renovate: registryUrl=https://bokysan.github.io/docker-postfix/
       chart: mail
       version: v3.4.0
       sourceRef:
