@@ -40,6 +40,12 @@ configMap:
   authentication_backend:
     ldap:
       enabled: true
+      start_tls: false
+      tls:
+        skip_verify: true
+      base_dn: dc=ingress,dc=space
+      additional_users_dn: ou=users
+      additional_groups_dn: ou=groups
     file:
       enabled: false
 persistence:
