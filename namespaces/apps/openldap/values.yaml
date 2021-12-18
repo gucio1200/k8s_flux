@@ -1,6 +1,6 @@
 replicaCount: 3
 
-logLevel: debug
+logLevel: info
 
 env:
  LDAP_LOG_LEVEL: "256"
