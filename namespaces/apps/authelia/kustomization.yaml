@@ -5,4 +5,4 @@ namespace: apps
 resources:
   - redis
   - postgres
-#  - authelia
+  - authelia
