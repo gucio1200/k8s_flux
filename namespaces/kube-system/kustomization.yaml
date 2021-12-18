@@ -10,3 +10,4 @@ resources:
   - node-problem-detector
   - kubelive
   - coredns
+  - minio

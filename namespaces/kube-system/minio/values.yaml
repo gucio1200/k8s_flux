@@ -1,0 +1,26 @@
+image:
+  repository: jessestuart/minio
+  tag: RELEASE.2020-08-08T04-50-06Z
+mcImage:
+  repository: jessestuart/mc
+  tag: RELEASE.2020-08-08T02-33-58Z
+helmKubectlJqImage:
+  repository: drnic/kubectl
+  tag: 1.16
+persistence:
+  subPath: "minio"
+resources:
+  requests:
+    memory: 350Mi
+    cpu: 25m
+  limits:
+    memory: 1000Mi
+securityContext:
+  enabled: false
+metrics:
+  serviceMonitor:
+    enabled: true
+nasgateway:
+  enabled: true
+  # Number of parallel instances
+  replicas: 3
