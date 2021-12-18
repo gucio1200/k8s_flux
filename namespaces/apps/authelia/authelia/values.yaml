@@ -53,6 +53,13 @@ configMap:
       additional_groups_dn: ou=groups
     file:
       enabled: false
+  access_control:
+    default_policy: deny
+    rules:
+    - domain: "*.ingress.space"
+       subject:
+       - "group:admins"
+       policy: one_factor
   totp:
     issuer: "ingress.space"
 persistence:
