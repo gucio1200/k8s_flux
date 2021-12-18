@@ -9,5 +9,6 @@ resources:
   - memcached
   - authelia
   - postfix
+  - openldap
 #  - authentik
 #  - oauth2-proxy

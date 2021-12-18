@@ -1,0 +1,10 @@
+apiVersion: ricoberger.de/v1alpha1
+kind: VaultSecret
+metadata:
+  name: ldap-helm-values
+  namespace: apps
+spec:
+  keys:
+    - ldap-helm-values
+  path: secret/apps/ldap
+  type: Opaque

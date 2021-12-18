@@ -1,0 +1,18 @@
+env:
+ LDAP_LOG_LEVEL: "256"
+ LDAP_ORGANISATION: "linuxology"
+ LDAP_DOMAIN: "ingress.space"
+ LDAP_RFC2307BIS_SCHEMA: "true"
+ LDAP_BACKEND: "mdb"
+ LDAP_TLS: "false"
+ CONTAINER_LOG_LEVEL: "4"
+ LDAP_TLS_REQCERT: "never"
+ KEEP_EXISTING_CONFIG: "false"
+ LDAP_REMOVE_CONFIG_AFTER_SETUP: "true"
+
+phpldapadmin:
+  enabled: true
+  ingress:
+    enabled: false
+  env:
+    PHPLDAPADMIN_LDAP_HOSTS: openldap-openldap-stack-ha
