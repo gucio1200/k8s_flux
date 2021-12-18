@@ -1,4 +1,5 @@
 persistence:
+  size: 50Gi
   subPath: "minio"
 resources:
   requests:
