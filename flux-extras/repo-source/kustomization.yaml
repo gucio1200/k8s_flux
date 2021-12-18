@@ -28,3 +28,4 @@ resources:
   - oauth2-proxy-charts.yaml
   - bokysan.yaml
   - openldap.yaml
+  - minio.yaml
