@@ -53,5 +53,7 @@ configMap:
       additional_groups_dn: ou=groups
     file:
       enabled: false
+  totp:
+    issuer: "ingress.space"
 persistence:
   enabled: true
