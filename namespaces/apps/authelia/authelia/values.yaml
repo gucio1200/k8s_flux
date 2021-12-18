@@ -10,7 +10,6 @@ ingress:
     ingress.kubernetes.io/ssl-passthrough: "false"
     kubernetes.io/load-balance: ip_hash
     nginx.ingress.kubernetes.io/service-upstream: "true"
-#    nginx.ingress.kubernetes.io/upstream-vhost: authelia.apps.svc.cluster.local
     nginx.ingress.kubernetes.io/modsecurity-snippet: |
       SecRuleEngine On
       SecRuleRemoveById 949110
@@ -40,12 +39,13 @@ configMap:
   authentication_backend:
     ldap:
       enabled: true
+      
       start_tls: true
       tls:
         skip_verify: true
       base_dn: dc=ingress,dc=space
       username_attribute: uid
-      users_filter: ""
+      users_filter: "(&(|({username_attribute}={input})({mail_attribute}={input}))(objectClass=inetOrgPerson))"
       group_name_attribute: cn
       groups_filter: ""
       display_name_attribute: cn
