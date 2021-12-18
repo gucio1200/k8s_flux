@@ -16,3 +16,6 @@ phpldapadmin:
     enabled: false
   env:
     PHPLDAPADMIN_LDAP_HOSTS: openldap-openldap-stack-ha
+
+ltb-passwd:
+  enabled: false
