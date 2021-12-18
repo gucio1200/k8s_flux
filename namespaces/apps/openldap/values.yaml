@@ -2,7 +2,7 @@ env:
  LDAP_LOG_LEVEL: "256"
  LDAP_ORGANISATION: "linuxology"
  LDAP_DOMAIN: "ingress.space"
- LDAP_RFC2307BIS_SCHEMA: "true"
+ LDAP_RFC2307BIS_SCHEMA: "false"
  LDAP_BACKEND: "mdb"
  LDAP_TLS: "true"
  LDAP_TLS_CRT_FILENAME: "tls.crt"
