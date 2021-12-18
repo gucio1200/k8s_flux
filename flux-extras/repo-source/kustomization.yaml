@@ -27,3 +27,4 @@ resources:
   - authentik-charts.yaml
   - oauth2-proxy-charts.yaml
   - bokysan.yaml
+  - openldap.yaml
