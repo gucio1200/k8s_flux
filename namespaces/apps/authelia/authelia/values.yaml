@@ -40,7 +40,8 @@ configMap:
   authentication_backend:
     ldap:
       enabled: true
-      start_tls: false
+      implementation: custom
+      start_tls: true
       tls:
         skip_verify: true
       base_dn: dc=ingress,dc=space
