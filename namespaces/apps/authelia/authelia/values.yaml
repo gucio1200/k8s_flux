@@ -20,7 +20,7 @@ ingress:
 configMap:
   enabled: true
   log:
-    level: trace
+    level: info
   access_control:
     default_policy: two_factor
   storage:
