@@ -17,8 +17,8 @@ ingress:
     nginx.ingress.kubernetes.io/server-snippet: |
       proxy_ssl_name pod-info.ingress.space;
       proxy_ssl_server_name on;
-    nginx.ingress.kubernetes.io/auth-url: "https://auth.ingress.space/api/verify"
-    nginx.ingress.kubernetes.io/auth-signin: "https://auth.ingress.space"
+#    nginx.ingress.kubernetes.io/auth-url: "https://auth.ingress.space/api/verify"
+#    nginx.ingress.kubernetes.io/auth-signin: "https://auth.ingress.space"
   hosts:
     - host: pod-info.ingress.space
       paths:
