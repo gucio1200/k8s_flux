@@ -44,6 +44,11 @@ configMap:
       tls:
         skip_verify: true
       base_dn: dc=ingress,dc=space
+      username_attribute: uid
+      users_filter: ""
+      group_name_attribute: cn
+      groups_filter: ""
+      display_name_attribute: cn
       mail_attribute: mail
       additional_users_dn: ou=users
       additional_groups_dn: ou=groups
