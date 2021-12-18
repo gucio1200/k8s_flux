@@ -40,10 +40,9 @@ configMap:
   authentication_backend:
     ldap:
       enabled: true
-      url: ldap://openldap-openldap-stack-ha.apps.svc.cluster.local:389
       start_tls: true
-#      tls:
-#        skip_verify: true
+      tls:
+        skip_verify: true
       base_dn: dc=ingress,dc=space
       mail_attribute: mail
       additional_users_dn: ou=users
