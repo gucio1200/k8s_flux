@@ -1,3 +1,5 @@
+replicas: 6
+
 persistence:
   size: 50Gi
   subPath: "minio"
@@ -16,6 +18,7 @@ nasgateway:
   enabled: true
   # Number of parallel instances
   replicas: 3
+
 
 tolerations:
   - key: node-role.kubernetes.io/controller
