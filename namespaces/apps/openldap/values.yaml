@@ -19,3 +19,6 @@ phpldapadmin:
 
 ltb-passwd:
   enabled: false
+
+test:
+  enabled: true
