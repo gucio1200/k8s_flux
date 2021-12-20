@@ -35,3 +35,31 @@ ltb-passwd:
 
 test:
   enabled: true
+
+tolerations:
+  - key: node-role.kubernetes.io/controller
+    effect: NoSchedule
+
+nodeSelector:
+  node.kubernetes.io/controller: "true"
+
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: app
+              operator: In
+              values:
+                - glusterfs-client-provisioner
+        topologyKey: kubernetes.io/hostname
+    preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - glusterfs-client-provisioner
+          topologyKey: failure-domain.beta.kubernetes.io/zone
