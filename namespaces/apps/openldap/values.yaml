@@ -42,24 +42,3 @@ tolerations:
 
 nodeSelector:
   node.kubernetes.io/controller: "true"
-
-affinity:
-  podAntiAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-          matchExpressions:
-            - key: app
-              operator: In
-              values:
-                - openldap-openldap-stack-ha
-        topologyKey: kubernetes.io/hostname
-    preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        podAffinityTerm:
-          labelSelector:
-            matchExpressions:
-              - key: app
-                operator: In
-                values:
-                  - openldap-openldap-stack-ha
-          topologyKey: failure-domain.beta.kubernetes.io/zone
