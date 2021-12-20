@@ -18,21 +18,6 @@ spec:
   install:
     remediation:
       retries: 3
-  values:
-    glusterfs:
-      server:
-        - 192.168.250.11
-        - 192.168.250.12
-        - 192.168.250.13
-        - 192.168.250.14
-        - 192.168.250.15
-        - 192.168.250.16
-      volume: gv0
-      path: /kubedata
-    storageClass:
-      defaultClass: true
-    tolerations:
-      - key: node-role.kubernetes.io/controller
-        effect: NoSchedule
-    nodeSelector:
-      node.kubernetes.io/controller: "true"
+  valuesFrom:
+    - kind: ConfigMap
+      name: glusterfs-values

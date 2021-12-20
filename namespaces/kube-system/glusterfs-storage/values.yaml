@@ -1,0 +1,38 @@
+glusterfs:
+  server:
+    - 192.168.250.11
+    - 192.168.250.12
+    - 192.168.250.13
+    - 192.168.250.14
+    - 192.168.250.15
+    - 192.168.250.16
+  volume: gv0
+  path: /kubedata
+storageClass:
+  defaultClass: true
+tolerations:
+  - key: node-role.kubernetes.io/controller
+    effect: NoSchedule
+nodeSelector:
+  node.kubernetes.io/controller: "true"
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: app
+              operator: In
+              values:
+                - glusterfs-client-provisioner
+        topologyKey: kubernetes.io/hostname
+    preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - glusterfs-client-provisioner
+          topologyKey: failure-domain.beta.kubernetes.io/zone
+
