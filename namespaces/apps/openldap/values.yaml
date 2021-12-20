@@ -51,7 +51,7 @@ affinity:
             - key: app
               operator: In
               values:
-                - glusterfs-client-provisioner
+                - openldap-openldap-stack-ha
         topologyKey: kubernetes.io/hostname
     preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
@@ -61,5 +61,5 @@ affinity:
               - key: app
                 operator: In
                 values:
-                  - glusterfs-client-provisioner
+                  - openldap-openldap-stack-ha
           topologyKey: failure-domain.beta.kubernetes.io/zone
