@@ -84,6 +84,12 @@ grafana:
         gnetId: 9614
         revision: 1
         datasource: Prometheus
+      flux-cluster:
+        url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/cluster.json
+        datasource: Prometheus
+      flux-control-plane:
+        url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/control-plane.json
+        datasource: Prometheus
       istio-mesh:
         # Ref: https://grafana.com/dashboards/7639
         gnetId: 7639
