@@ -4,7 +4,7 @@ metadata:
   name: vault
 spec:
   size: 3
-  image: vault:1.9.1
+  image: vault:1.9.2
   bankVaultsImage: ghcr.io/banzaicloud/bank-vaults:latest
 
   # Common annotations for all created resources
