@@ -1,7 +1,5 @@
 persistentVolumeClaim:
   enabled: true
-  annotations:
-    pv.beta.kubernetes.io/gid: "999"
 
 serviceDhcp:
   enabled: false
@@ -18,5 +16,5 @@ serviceDns:
     metallb.universe.tf/allow-shared-ip: pihole-svc
   type: LoadBalancer
 
-ftl:
-  RATE_LIMIT: 0/0
+#ftl:
+#  RATE_LIMIT: 0/0
