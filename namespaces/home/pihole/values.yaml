@@ -1,7 +1,7 @@
 persistentVolumeClaim:
   enabled: true
   annotations:
-    pv.beta.kubernetes.io/gid: "0"
+    pv.beta.kubernetes.io/gid: "999"
 
 serviceDhcp:
   enabled: false
