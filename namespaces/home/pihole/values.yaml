@@ -15,3 +15,6 @@ serviceDns:
   annotations:
     metallb.universe.tf/allow-shared-ip: pihole-svc
   type: LoadBalancer
+
+ftl:
+  RATE_LIMIT: 0/0
