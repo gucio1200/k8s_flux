@@ -10,7 +10,7 @@ spec:
     name: flux-system
   path: ./namespaces/kyverno/kyverno
   prune: true
-  wait: true
+#  wait: true
 
 #---
 #apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
