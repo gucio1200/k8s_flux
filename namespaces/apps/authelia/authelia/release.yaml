@@ -18,7 +18,7 @@ spec:
       interval: 5m
   dependsOn:
     - name: vault-secrets-operator
-      namespace: vault-operator
+      namespace: vault
   valuesFrom:
     - kind: ConfigMap
       name: authelia-values
