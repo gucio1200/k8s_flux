@@ -2,6 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: authelia
+  namespace: apps
 spec:
   hosts:
     - auth.ingress.space

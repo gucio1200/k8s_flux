@@ -81,3 +81,22 @@ spec:
   prune: true
   force: true
   validation: client
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: istio-services
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: istio-system
+  timeout: 5m0s
+  interval: 10m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./namespaces/istio/services
+  prune: true
+  force: true
+  validation: client

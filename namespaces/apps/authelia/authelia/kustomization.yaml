@@ -5,7 +5,7 @@ namespace: apps
 resources:
   - authelia-helm-vaules.yaml
   - release.yaml
-  - istio_vs.yaml
+#  - istio_vs.yaml
 configMapGenerator:
   - name: authelia-values
     files:
