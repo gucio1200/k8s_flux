@@ -16,6 +16,9 @@ spec:
         name: authelia
         namespace: flux-system
       interval: 5m
+  dependsOn:
+    - name: vault-secrets-operator
+      namespace: vault-operator
   valuesFrom:
     - kind: ConfigMap
       name: authelia-values
