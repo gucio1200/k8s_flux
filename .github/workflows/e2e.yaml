@@ -23,7 +23,6 @@ jobs:
         run: flux install --log-level debug
       - name: Setup cluster reconciliation
         run: |
-#          flux create source git flux-system \
           flux bootstrap git \
           --interval=15m \
           --url=${{ github.event.repository.html_url }} \
