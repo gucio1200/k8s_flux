@@ -37,4 +37,5 @@ jobs:
           kubectl -n flux-system logs deploy/notification-controller
           flux get sources all --all-namespaces
           flux get ks --all-namespaces
+          flux get all -A
 
