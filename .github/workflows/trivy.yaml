@@ -2,13 +2,12 @@
 name: Scan Containers
 
 on: # yamllint disable-line rule:truthy
-  push:
-#  pull_request:
-#    branches:
-#      - main
-#    paths:
-#      - "gitops/**.yaml"
-#      - "ansible/**.yml.j2"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "*/**.yaml"
+      - "*/**.yml"
 
 jobs:
   detect-file-changes:
@@ -72,4 +71,3 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: trivy-results.sarif
-
