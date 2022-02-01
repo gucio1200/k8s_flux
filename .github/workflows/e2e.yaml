@@ -31,7 +31,6 @@ jobs:
           --source=flux-system \
           --path=./
       - name: Debug failure
-#        if: failure()
         run: |
           kubectl get all --all-namespaces
           kubectl -n flux-system logs deploy/source-controller
