@@ -23,10 +23,13 @@ jobs:
         run: flux install --log-level debug
       - name: Setup cluster reconciliation
         run: |
-          flux bootstrap git \
+          flux create source git flux-system \
           --interval=15m \
           --url=${{ github.event.repository.html_url }} \
           --branch=${GITHUB_REF#refs/heads/}
+          flux create kustomization flux-system \
+          --source=flux-system \
+          --path=./flux-system
       - name: Debug failure
 #        if: failure()
         run: |
