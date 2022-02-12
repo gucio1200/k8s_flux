@@ -482,7 +482,7 @@ spec:
         node.kubernetes.io/controller: "true"
       containers:
         - name: prometheus-server-configmap-reload
-          image: "jimmidyson/configmap-reload:v0.6.1"
+          image: "jimmidyson/configmap-reload:v0.7.1"
           imagePullPolicy: "IfNotPresent"
           args:
             - --volume-dir=/etc/config
