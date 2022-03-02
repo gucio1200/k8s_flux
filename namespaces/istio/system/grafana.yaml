@@ -138,7 +138,7 @@ spec:
         node.kubernetes.io/controller: "true"
       containers:
         - name: grafana
-          image: "grafana/grafana:8.4.2"
+          image: "grafana/grafana:8.4.3"
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: config
