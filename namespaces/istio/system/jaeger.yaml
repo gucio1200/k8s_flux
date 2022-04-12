@@ -25,7 +25,7 @@ spec:
         node.kubernetes.io/controller: "true"
       containers:
         - name: jaeger
-          image: "docker.io/jaegertracing/all-in-one:1.32"
+          image: "docker.io/jaegertracing/all-in-one:1.33"
           env:
             - name: BADGER_EPHEMERAL
               value: "false"
