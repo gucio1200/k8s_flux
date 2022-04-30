@@ -448,7 +448,7 @@ spec:
       nodeSelector:
         node.kubernetes.io/controller: "true"
       containers:
-      - image: "quay.io/kiali/kiali:v1.49"
+      - image: "quay.io/kiali/kiali:v1.50"
         imagePullPolicy: Always
         name: kiali
         command:
